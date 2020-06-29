@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PackageId>2captcha-csharp</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>2captcha</Authors>
+    <Company>2captcha</Company>
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+</Project>

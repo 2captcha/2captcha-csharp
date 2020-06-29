@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCaptcha", "TwoCaptcha\TwoCaptcha.csproj", "{43E53565-390B-41C2-B2F9-225505C3C87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCaptcha.Examples", "TwoCaptcha.Examples\TwoCaptcha.Examples.csproj", "{954E934C-0515-410C-A7BD-D1B08533A618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoCaptcha.Tests", "TwoCaptcha.Tests\TwoCaptcha.Tests.csproj", "{FAFE124B-3E0B-4836-AC42-6FBBD70F21A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43E53565-390B-41C2-B2F9-225505C3C87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E53565-390B-41C2-B2F9-225505C3C87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E53565-390B-41C2-B2F9-225505C3C87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E53565-390B-41C2-B2F9-225505C3C87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954E934C-0515-410C-A7BD-D1B08533A618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954E934C-0515-410C-A7BD-D1B08533A618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954E934C-0515-410C-A7BD-D1B08533A618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954E934C-0515-410C-A7BD-D1B08533A618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAFE124B-3E0B-4836-AC42-6FBBD70F21A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAFE124B-3E0B-4836-AC42-6FBBD70F21A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAFE124B-3E0B-4836-AC42-6FBBD70F21A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAFE124B-3E0B-4836-AC42-6FBBD70F21A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
