@@ -26,7 +26,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
 
 
 ## Installation
-Maven repo: TODO
+Install nuget package from [nuget]
 
 ## Configuration
 `TwoCaptcha` instance can be created like this:
@@ -242,3 +242,4 @@ catch (TimeoutException e)
 }
 ```
 [2Captcha]: https://2captcha.com/
+[nuget]: https://www.nuget.org/packages/2captcha-csharp/
