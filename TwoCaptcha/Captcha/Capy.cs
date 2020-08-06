@@ -16,5 +16,11 @@ namespace TwoCaptcha.Captcha
         {
             parameters["pageurl"] = url;
         }
+
+        public void SetApiServer(string apiServer)
+        {
+            parameters["api_server"] = apiServer;
+        }
+
     }
 }

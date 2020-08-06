@@ -13,6 +13,7 @@ namespace TwoCaptcha.Examples
             Capy captcha = new Capy();
             captcha.SetSiteKey("PUZZLE_Abc1dEFghIJKLM2no34P56q7rStu8v");
             captcha.SetUrl("https://www.mysite.com/captcha/");
+            captcha.SetApiServer("https://jp.api.capy.me/");
 
             try
             {
