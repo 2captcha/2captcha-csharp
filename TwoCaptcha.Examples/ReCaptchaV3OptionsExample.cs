@@ -14,6 +14,7 @@ namespace TwoCaptcha.Examples
             captcha.SetSiteKey("6Le-wvkSVVABCPBMRTvw0Q4Muexq1bi0DJwx_mJ-");
             captcha.SetUrl("https://mysite.com/page/with/recaptcha");
             captcha.SetVersion("v3");
+            captcha.SetDomain("google.com");
             captcha.SetAction("verify");
             captcha.SetScore(0.3);
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
