@@ -34,6 +34,11 @@ namespace TwoCaptcha.Captcha
             parameters["action"] = action;
         }
 
+        public void SetDomain(string domain)
+        {
+            parameters["domain"] = domain;
+        }
+
         public void SetScore(double score)
         {
             parameters["min_score"] = Convert.ToString(score).Replace(',', '.');

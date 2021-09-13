@@ -17,6 +17,7 @@ namespace TwoCaptcha.Tests
             captcha.SetUrl("https://mysite.com/page/with/recaptcha");
             captcha.SetInvisible(true);
             captcha.SetAction("verify");
+            captcha.SetDomain("recaptcha.net");
 
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "userrecaptcha";
@@ -24,6 +25,7 @@ namespace TwoCaptcha.Tests
             parameters["pageurl"] = "https://mysite.com/page/with/recaptcha";
             parameters["invisible"] = "1";
             parameters["action"] = "verify";
+            parameters["domain"] = "recaptcha.net";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -37,6 +39,7 @@ namespace TwoCaptcha.Tests
             captcha.SetVersion("v3");
             captcha.SetAction("verify");
             captcha.SetScore(0.3);
+            captcha.SetDomain("recaptcha.net");
 
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "userrecaptcha";
@@ -45,6 +48,7 @@ namespace TwoCaptcha.Tests
             parameters["version"] = "v3";
             parameters["action"] = "verify";
             parameters["min_score"] = "0.3";
+            parameters["domain"] = "recaptcha.net";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
