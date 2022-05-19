@@ -16,6 +16,7 @@ namespace TwoCaptcha.Examples
             captcha.SetInvisible(true);
             captcha.SetDomain("google.com");
             captcha.SetAction("verify");
+            captcha.SetEnterprise(false);
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 
             try

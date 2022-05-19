@@ -127,6 +127,7 @@ ReCaptcha captcha = new ReCaptcha();
 captcha.SetSiteKey("6Le-wvkSVVABCPBMRTvw0Q4Muexq1bi0DJwx_mJ-");
 captcha.SetUrl("https://mysite.com/page/with/recaptcha");
 captcha.SetInvisible(true);
+captcha.SetEnterprise(false);
 captcha.SetAction("verify");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
@@ -138,6 +139,7 @@ ReCaptcha captcha = new ReCaptcha();
 captcha.SetSiteKey("6Le-wvkSVVABCPBMRTvw0Q4Muexq1bi0DJwx_mJ-");
 captcha.SetUrl("https://mysite.com/page/with/recaptcha");
 captcha.SetVersion("v3");
+captcha.SetEnterprise(false);
 captcha.SetDomain("google.com");
 captcha.SetAction("verify");
 captcha.SetScore(0.3);

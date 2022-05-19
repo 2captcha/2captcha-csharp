@@ -43,5 +43,10 @@ namespace TwoCaptcha.Captcha
         {
             parameters["min_score"] = Convert.ToString(score).Replace(',', '.');
         }
+
+        public void SetEnterprise(bool invisible)
+        {
+            parameters["enterprise"] = invisible ? "1" : "0";
+        }
     }
 }
