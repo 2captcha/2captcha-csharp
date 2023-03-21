@@ -19,6 +19,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [Rotate](#rotate)
   - [Audio](#audio)
   - [Yandex](#yandex)
+  - [Lemin](#lemin)
 - [Other methods](#other-methods)
   - [send / getResult](#send--getresult)
   - [balance](#balance)
@@ -275,6 +276,17 @@ Yandex captcha = new Yandex();
 captcha.SetSiteKey("Y5Lh0tiycconMJGsFd3EbbuNKSp1yaZESUOIHfeV");
 captcha.SetUrl("https://rutube.ru");
 ```
+
+### Lemin
+Use this method to solve Lemin and obtain a token to bypass the protection.
+
+```csharp
+Lemin captcha = new Lemin();
+captcha.SetCaptchaId("CROPPED_d3d4d56_73ca4008925b4f83a8bed59c2dd0df6d");
+captcha.SetApiServer("api.leminnow.com");
+captcha.SetUrl("http://sat2.aksigorta.com.tr");
+```
+
 
 
 ## Other methods
