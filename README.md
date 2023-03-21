@@ -10,6 +10,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [ReCaptcha v3](#recaptcha-v3)
   - [FunCaptcha](#funcaptcha)
   - [GeeTest](#geetest)
+  - [GeeTestV4](#geetestv4)
   - [hCaptcha](#hcaptcha)
   - [KeyCaptcha](#keycaptcha)
   - [Capy](#capy)
@@ -17,6 +18,11 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [Canvas](#canvas)
   - [ClickCaptcha](#clickcaptcha)
   - [Rotate](#rotate)
+  - [Audio](#audio)
+  - [Yandex](#yandex)
+  - [Lemin](#lemin)
+  - [Turnstile](#turnstile)
+  - [AmazonWaf](#amazonwaf)
 - [Other methods](#other-methods)
   - [send / getResult](#send--getresult)
   - [balance](#balance)
@@ -171,6 +177,16 @@ captcha.SetUrl("https://mysite.com/captcha.html");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
+### GeeTestV4
+Method to solve GeeTestV4 puzzle captcha. Returns a set of tokens as JSON.
+
+```csharp
+GeeTestV4 captcha = new GeeTestV4();
+captcha.SetCaptchaId("72bf15796d0b69c43867452fea615052");
+captcha.SetChallenge("12345678abc90123d45678ef90123a456b");
+captcha.SetUrl("https://mysite.com/captcha.html");
+```
+
 ### hCaptcha
 Use this method to solve hCaptcha challenge. Returns a token to bypass captcha.
 
@@ -254,6 +270,56 @@ captcha.SetLang("en");
 captcha.SetHintImg(new FileInfo("path/to/hint.jpg"));
 captcha.SetHintText("Put the images in the correct way up");
 ```
+
+### Audio
+This method can be used to solve a audio captcha
+
+```csharp
+AudioCaptcha captcha = new AudioCaptcha();
+byte[] bytes = File.ReadAllBytes("../../resources/audio-en.mp3");
+string base64EncodedImage = Convert.ToBase64String(bytes);
+captcha.SetBase64(base64EncodedImage);
+```
+
+### Yandex
+Use this method to solve Yandex and obtain a token to bypass the protection.
+
+```csharp
+Yandex captcha = new Yandex();
+captcha.SetSiteKey("Y5Lh0tiycconMJGsFd3EbbuNKSp1yaZESUOIHfeV");
+captcha.SetUrl("https://rutube.ru");
+```
+
+### Lemin
+Use this method to solve Lemin and obtain a token to bypass the protection.
+
+```csharp
+Lemin captcha = new Lemin();
+captcha.SetCaptchaId("CROPPED_d3d4d56_73ca4008925b4f83a8bed59c2dd0df6d");
+captcha.SetApiServer("api.leminnow.com");
+captcha.SetUrl("http://sat2.aksigorta.com.tr");
+```
+
+### Turnstile
+Use this method to solve Turnstile and obtain a token to bypass the protection.
+
+```csharp
+Turnstile captcha = new Turnstile();
+captcha.SetSiteKey("0x4AAAAAAAChNiVJM_WtShFf");
+captcha.SetUrl("https://ace.fusionist.io");
+```
+
+### AmazonWaf
+Use this method to solve AmazonWaf and obtain a token to bypass the protection.
+
+```csharp
+AmazonWaf captcha = new AmazonWaf();
+captcha.SetSiteKey("AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AF5H1K/siwSLK7RfstKtN5bAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglg");
+captcha.SetUrl("https://non-existent-example.execute-api.us-east-1.amazonaws.com");
+captcha.SetContext("test_iv");
+captcha.SetIV("test_context");
+```
+
 
 ## Other methods
 
