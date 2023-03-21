@@ -77,6 +77,7 @@ namespace TwoCaptcha.Tests
 
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
+            parameters["recaptcha"] = "1";
             parameters["recaptcharows"] = "3";
             parameters["recaptchacols"] = "3";
             parameters["previousID"] = "0";
