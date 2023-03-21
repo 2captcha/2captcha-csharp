@@ -10,6 +10,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [ReCaptcha v3](#recaptcha-v3)
   - [FunCaptcha](#funcaptcha)
   - [GeeTest](#geetest)
+  - [GeeTestV4](#geetestv4)
   - [hCaptcha](#hcaptcha)
   - [KeyCaptcha](#keycaptcha)
   - [Capy](#capy)
@@ -174,6 +175,16 @@ captcha.SetApiServer("api-na.geetest.com");
 captcha.SetChallenge("12345678abc90123d45678ef90123a456b");
 captcha.SetUrl("https://mysite.com/captcha.html");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+```
+
+### GeeTestV4
+Method to solve GeeTestV4 puzzle captcha. Returns a set of tokens as JSON.
+
+```csharp
+GeeTestV4 captcha = new GeeTestV4();
+captcha.SetCaptchaId("72bf15796d0b69c43867452fea615052");
+captcha.SetChallenge("12345678abc90123d45678ef90123a456b");
+captcha.SetUrl("https://mysite.com/captcha.html");
 ```
 
 ### hCaptcha
