@@ -18,6 +18,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [ClickCaptcha](#clickcaptcha)
   - [Rotate](#rotate)
   - [Audio](#audio)
+  - [Yandex](#yandex)
 - [Other methods](#other-methods)
   - [send / getResult](#send--getresult)
   - [balance](#balance)
@@ -264,6 +265,15 @@ AudioCaptcha captcha = new AudioCaptcha();
 byte[] bytes = File.ReadAllBytes("../../resources/audio-en.mp3");
 string base64EncodedImage = Convert.ToBase64String(bytes);
 captcha.SetBase64(base64EncodedImage);
+```
+
+### Yandex
+Use this method to solve Yandex and obtain a token to bypass the protection.
+
+```csharp
+Yandex captcha = new Yandex();
+captcha.SetSiteKey("Y5Lh0tiycconMJGsFd3EbbuNKSp1yaZESUOIHfeV");
+captcha.SetUrl("https://rutube.ru");
 ```
 
 
