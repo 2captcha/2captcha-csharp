@@ -17,6 +17,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [Canvas](#canvas)
   - [ClickCaptcha](#clickcaptcha)
   - [Rotate](#rotate)
+  - [Audio](#audio)
 - [Other methods](#other-methods)
   - [send / getResult](#send--getresult)
   - [balance](#balance)
@@ -254,6 +255,17 @@ captcha.SetLang("en");
 captcha.SetHintImg(new FileInfo("path/to/hint.jpg"));
 captcha.SetHintText("Put the images in the correct way up");
 ```
+
+### Audio
+This method can be used to solve a audio captcha
+
+```csharp
+AudioCaptcha captcha = new AudioCaptcha();
+byte[] bytes = File.ReadAllBytes("../../resources/audio-en.mp3");
+string base64EncodedImage = Convert.ToBase64String(bytes);
+captcha.SetBase64(base64EncodedImage);
+```
+
 
 ## Other methods
 
