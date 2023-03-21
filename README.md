@@ -21,6 +21,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [Yandex](#yandex)
   - [Lemin](#lemin)
   - [Turnstile](#turnstile)
+  - [AmazonWaf](#amazonwaf)
 - [Other methods](#other-methods)
   - [send / getResult](#send--getresult)
   - [balance](#balance)
@@ -289,10 +290,23 @@ captcha.SetUrl("http://sat2.aksigorta.com.tr");
 ```
 
 ### Turnstile
+Use this method to solve Turnstile and obtain a token to bypass the protection.
+
 ```csharp
 Turnstile captcha = new Turnstile();
 captcha.SetSiteKey("0x4AAAAAAAChNiVJM_WtShFf");
 captcha.SetUrl("https://ace.fusionist.io");
+```
+
+### AmazonWaf
+Use this method to solve AmazonWaf and obtain a token to bypass the protection.
+
+```csharp
+AmazonWaf captcha = new AmazonWaf();
+captcha.SetSiteKey("AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AF5H1K/siwSLK7RfstKtN5bAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglg");
+captcha.SetUrl("https://non-existent-example.execute-api.us-east-1.amazonaws.com");
+captcha.SetContext("test_iv");
+captcha.SetIV("test_context");
 ```
 
 
