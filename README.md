@@ -20,6 +20,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
   - [Audio](#audio)
   - [Yandex](#yandex)
   - [Lemin](#lemin)
+  - [Turnstile](#turnstile)
 - [Other methods](#other-methods)
   - [send / getResult](#send--getresult)
   - [balance](#balance)
@@ -287,6 +288,12 @@ captcha.SetApiServer("api.leminnow.com");
 captcha.SetUrl("http://sat2.aksigorta.com.tr");
 ```
 
+### Turnstile
+```csharp
+Turnstile captcha = new Turnstile();
+captcha.SetSiteKey("0x4AAAAAAAChNiVJM_WtShFf");
+captcha.SetUrl("https://ace.fusionist.io");
+```
 
 
 ## Other methods
