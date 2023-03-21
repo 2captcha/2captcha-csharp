@@ -7,6 +7,7 @@ namespace TwoCaptcha.Captcha
     {
         public Grid() : base()
         {
+            parameters["recaptcha"] = "1";
         }
 
         public Grid(string filePath) : this(new FileInfo(filePath))
