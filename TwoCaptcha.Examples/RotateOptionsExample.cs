@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using TwoCaptcha.Captcha;
@@ -12,16 +11,15 @@ namespace TwoCaptcha.Examples
         {
             TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
 
-            var images = new List<FileInfo>();
-            images.Add(new FileInfo("../../resources/rotate.jpg"));
-            images.Add(new FileInfo("../../resources/rotate_2.jpg"));
-            images.Add(new FileInfo("../../resources/rotate_3.jpg"));
+            byte[] bytes = File.ReadAllBytes("../../resources/rotate.jpg");
+            string base64EncodedImage = Convert.ToBase64String(bytes);
+
 
             Rotate captcha = new Rotate();
-            captcha.SetFiles(images);
+            captcha.SetBase64(base64EncodedImage);
             captcha.SetAngle(40);
             captcha.SetLang("en");
-            captcha.SetHintImg(new FileInfo("../../resources/rotate_hint.jpg"));
+            captcha.SetHintImg(new FileInfo("../../resources/rotate.jpg"));
             captcha.SetHintText("Put the images in the correct way up");
 
             try

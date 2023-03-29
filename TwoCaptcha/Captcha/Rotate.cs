@@ -11,38 +11,10 @@ namespace TwoCaptcha.Captcha
             parameters["method"] = "rotatecaptcha";
         }
 
-        public Rotate(string filePath) : this(new FileInfo(filePath))
-        {
-        }
 
-        public Rotate(FileInfo file) : this()
+        public void SetBase64(String base64)
         {
-            SetFile(file);
-        }
-
-        public Rotate(List<FileInfo> files) : this()
-        {
-            SetFiles(files);
-        }
-
-        public void SetFile(String filePath)
-        {
-            SetFile(new FileInfo(filePath));
-        }
-
-        public void SetFile(FileInfo file)
-        {
-            files["file_1"] = file;
-        }
-
-        public void SetFiles(List<FileInfo> files)
-        {
-            int n = 1;
-
-            foreach (FileInfo file in files)
-            {
-                this.files["file_" + n++] = file;
-            }
+            parameters["body"] = base64;
         }
 
         public void SetAngle(double angle)
