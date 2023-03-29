@@ -13,7 +13,6 @@ namespace TwoCaptcha.Examples
 
             byte[] bytes = File.ReadAllBytes("../../resources/rotate.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
-            Console.WriteLine("base64EncodedImage: " + base64EncodedImage);
 
 
             Rotate captcha = new Rotate();
