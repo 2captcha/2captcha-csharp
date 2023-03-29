@@ -22,6 +22,7 @@ namespace TwoCaptcha.Tests
 
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
+            parameters["recaptcha"] = "1";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;
@@ -39,6 +40,7 @@ namespace TwoCaptcha.Tests
 
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
+            parameters["recaptcha"] = "1";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;
@@ -55,6 +57,7 @@ namespace TwoCaptcha.Tests
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "base64";
             parameters["body"] = "...";
+            parameters["recaptcha"] = "1";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
