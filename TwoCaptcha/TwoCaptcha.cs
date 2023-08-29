@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using TwoCaptcha.Captcha;
@@ -232,7 +233,7 @@ namespace TwoCaptcha
         public async Task<double> Balance()
         {
             string response = await Res("getbalance");
-            return Convert.ToDouble(response);
+            return double.Parse(response, NumberStyles.Any, CultureInfo.InvariantCulture);
         }
 
         /**
