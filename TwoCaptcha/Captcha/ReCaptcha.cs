@@ -48,5 +48,10 @@ namespace TwoCaptcha.Captcha
         {
             parameters["enterprise"] = invisible ? "1" : "0";
         }
+
+        public void SetDataS(string data)
+        {
+            parameters["data-s"] = data;
+        }
     }
 }

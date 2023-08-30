@@ -16,5 +16,18 @@ namespace TwoCaptcha.Captcha
         {
             parameters["pageurl"] = url;
         }
+
+        public void SetAction(string action)
+        {
+            parameters["action"] = action;
+        }
+        public void SetData(string data)
+        {
+            parameters["data"] = data;
+        }
+        public void SetPageData(string pagedata)
+        {
+            parameters["pagedata"] = pagedata;
+        }
     }
 }
