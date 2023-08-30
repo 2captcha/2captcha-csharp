@@ -18,6 +18,7 @@ namespace TwoCaptcha.Tests
             captcha.SetInvisible(true);
             captcha.SetAction("verify");
             captcha.SetDomain("recaptcha.net");
+            captcha.SetDataS("foo");
 
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "userrecaptcha";
@@ -26,6 +27,7 @@ namespace TwoCaptcha.Tests
             parameters["invisible"] = "1";
             parameters["action"] = "verify";
             parameters["domain"] = "recaptcha.net";
+            parameters["data-s"] = "foo";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
