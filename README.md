@@ -1,33 +1,37 @@
 # C# Module for 2Captcha API
 The easiest way to quickly integrate [2Captcha] into your code to automate solving of any types of captcha.
 
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Solve captcha](#solve-captcha)
-  - [Normal Captcha](#normal-captcha)
-  - [Text](#text-captcha)
-  - [ReCaptcha v2](#recaptcha-v2)
-  - [ReCaptcha v3](#recaptcha-v3)
-  - [FunCaptcha](#funcaptcha)
-  - [GeeTest](#geetest)
-  - [GeeTestV4](#geetestv4)
-  - [hCaptcha](#hcaptcha)
-  - [KeyCaptcha](#keycaptcha)
-  - [Capy](#capy)
-  - [Grid (ReCaptcha V2 Old Method)](#grid)
-  - [Canvas](#canvas)
-  - [ClickCaptcha](#clickcaptcha)
-  - [Rotate](#rotate)
-  - [Audio](#audio)
-  - [Yandex](#yandex)
-  - [Lemin](#lemin)
-  - [Turnstile](#turnstile)
-  - [AmazonWaf](#amazonwaf)
-- [Other methods](#other-methods)
-  - [send / getResult](#send--getresult)
-  - [balance](#balance)
-  - [report](#report)
-- [Error handling](#error-handling)
+- [C# Module for 2Captcha API](#c-module-for-2captcha-api)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [TwoCaptcha instance options](#twocaptcha-instance-options)
+  - [Solve captcha](#solve-captcha)
+    - [Captcha options](#captcha-options)
+    - [Basic example](#basic-example)
+    - [Normal Captcha](#normal-captcha)
+    - [Text Captcha](#text-captcha)
+    - [ReCaptcha v2](#recaptcha-v2)
+    - [ReCaptcha v3](#recaptcha-v3)
+    - [FunCaptcha](#funcaptcha)
+    - [GeeTest](#geetest)
+    - [GeeTestV4](#geetestv4)
+    - [hCaptcha](#hcaptcha)
+    - [KeyCaptcha](#keycaptcha)
+    - [Capy](#capy)
+    - [Grid](#grid)
+    - [Canvas](#canvas)
+    - [ClickCaptcha](#clickcaptcha)
+    - [Rotate](#rotate)
+    - [Audio](#audio)
+    - [Yandex](#yandex)
+    - [Lemin](#lemin)
+    - [Turnstile](#turnstile)
+    - [AmazonWaf](#amazonwaf)
+  - [Other methods](#other-methods)
+    - [send / getResult](#send--getresult)
+    - [balance](#balance)
+    - [report](#report)
+  - [Error handling](#error-handling)
 
 ## Installation
 Install nuget package from [nuget]
@@ -48,13 +52,13 @@ solver.PollingInterval = 10;
 
 ### TwoCaptcha instance options
 
-|Option|Default value|Description|
-|---|---|---|
-|softId|-|your software ID obtained after publishing in [2captcha sofware catalog]|
-|callback|-|URL of your web-sever that receives the captcha recognition result. The URl should be first registered in [pingback settings] of your account|
-|defaultTimeout|120|Polling timeout in seconds for all captcha types except ReCaptcha. Defines how long the module tries to get the answer from `res.php` API endpoint|
-|recaptchaTimeout|600|Polling timeout for ReCaptcha in seconds. Defines how long the module tries to get the answer from `res.php` API endpoint|
-|pollingInterval|10|Interval in seconds between requests to `res.php` API endpoint, setting values less than 5 seconds is not recommended|
+| Option           | Default value | Description                                                                                                                                        |
+| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| softId           | -             | your software ID obtained after publishing in [2captcha sofware catalog]                                                                           |
+| callback         | -             | URL of your web-sever that receives the captcha recognition result. The URl should be first registered in [pingback settings] of your account      |
+| defaultTimeout   | 120           | Polling timeout in seconds for all captcha types except ReCaptcha. Defines how long the module tries to get the answer from `res.php` API endpoint |
+| recaptchaTimeout | 600           | Polling timeout for ReCaptcha in seconds. Defines how long the module tries to get the answer from `res.php` API endpoint                          |
+| pollingInterval  | 10            | Interval in seconds between requests to `res.php` API endpoint, setting values less than 5 seconds is not recommended                              |
 
 >  **IMPORTANT:** once `Callback` is defined for `TwoCaptcha` instance, all methods return only the captcha ID and DO NOT poll the API to get the result. The result will be sent to the callback URL.
 To get the answer manually use [getResult method](#send--getresult)
@@ -63,17 +67,17 @@ To get the answer manually use [getResult method](#send--getresult)
 When you submit any image-based captcha use can provide additional options to help 2captcha workers to solve it properly.
 
 ### Captcha options
-|Option|Default Value|Description|
-|---|---|---|
-|numeric|0|Defines if captcha contains numeric or other symbols [see more info in the API docs][post options]|
-|minLength|0|minimal answer lenght|
-|maxLength|0|maximum answer length|
-|phrase|0|defines if the answer contains multiple words or not|
-|caseSensitive|0|defines if the answer is case sensitive|
-|calc|0|defines captcha requires calculation|
-|lang|-|defines the captcha language, see the [list of supported languages] |
-|hintImg|-|an image with hint shown to workers with the captcha|
-|hintText|-|hint or task text shown to workers with the captcha|
+| Option        | Default Value | Description                                                                                        |
+| ------------- | ------------- | -------------------------------------------------------------------------------------------------- |
+| numeric       | 0             | Defines if captcha contains numeric or other symbols [see more info in the API docs][post options] |
+| minLength     | 0             | minimal answer lenght                                                                              |
+| maxLength     | 0             | maximum answer length                                                                              |
+| phrase        | 0             | defines if the answer contains multiple words or not                                               |
+| caseSensitive | 0             | defines if the answer is case sensitive                                                            |
+| calc          | 0             | defines captcha requires calculation                                                               |
+| lang          | -             | defines the captcha language, see the [list of supported languages]                                |
+| hintImg       | -             | an image with hint shown to workers with the captcha                                               |
+| hintText      | -             | hint or task text shown to workers with the captcha                                                |
 
 Below you can find basic examples for every captcha type. Check out [examples directory] to find more examples with all available options.
 
@@ -194,6 +198,7 @@ Use this method to solve hCaptcha challenge. Returns a token to bypass captcha.
 HCaptcha captcha = new HCaptcha();
 captcha.SetSiteKey("10000000-ffff-ffff-ffff-000000000001");
 captcha.SetUrl("https://www.site.com/page/");
+captcha.SetData("foo");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
@@ -307,6 +312,9 @@ Use this method to solve Turnstile and obtain a token to bypass the protection.
 Turnstile captcha = new Turnstile();
 captcha.SetSiteKey("0x4AAAAAAAChNiVJM_WtShFf");
 captcha.SetUrl("https://ace.fusionist.io");
+captcha.SetData("foo");
+captcha.SetPageData("bar");
+captcha.SetAction("baz");
 ```
 
 ### AmazonWaf
