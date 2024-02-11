@@ -1,4 +1,4 @@
-# C# Module for 2Captcha API
+ushys# C# Module for 2Captcha API
 The easiest way to quickly integrate [2Captcha] into your code to automate solving of any types of captcha.
 
 - [C# Module for 2Captcha API](#c-module-for-2captcha-api)
