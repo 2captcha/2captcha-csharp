@@ -31,6 +31,7 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
     - [send / getResult](#send--getresult)
     - [balance](#balance)
     - [report](#report)
+  - [Proxies](#proxies)
   - [Error handling](#error-handling)
 
 ## Installation
@@ -354,6 +355,16 @@ Use this method to report good or bad captcha answer.
 await solver.Report(captcha.Id, true); // captcha solved correctly
 await solver.Report(captcha.Id, false); // captcha solved incorrectly
 ```
+## Proxies
+
+You can pass your proxy as an additional argument for methods: recaptcha, funcaptcha, geetest, geetest v4, hcaptcha, keycaptcha, capy puzzle, lemin, turnstile, amazon waf and etc. The proxy will be forwarded to the API to solve the captcha.
+
+We have our own proxies that we can offer you. [Buy residential proxies](https://2captcha.com/proxy/residential-proxies) for avoid restrictions and blocks. [Quick start](https://2captcha.com/proxy?openAddTrafficModal=true).
+
+```csharp
+captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+```
+
 
 ## Error handling
 If case of an error captcha solver throws an exception. It's important to properly handle these cases. We recommend to use `try catch` to handle exceptions.
