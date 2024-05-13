@@ -25,6 +25,7 @@ namespace TwoCaptcha.Tests
             parameters["s_s_c_web_server_sign"] = "9006dc725760858e4c0715b835472f22-pz-";
             parameters["s_s_c_web_server_sign2"] = "2ca3abe86d90c6142d5571db98af6714";
             parameters["pageurl"] = "https://www.keycaptcha.ru/demo-magnetic/";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

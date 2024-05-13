@@ -21,6 +21,7 @@ namespace TwoCaptcha.Tests
             parameters["captchakey"] = "PUZZLE_Abc1dEFghIJKLM2no34P56q7rStu8v";
             parameters["pageurl"] = "http://mysite.com/";
             parameters["api_server"] = "https://myapiserver.com/";
+            parameters["soft_id"] = "4582";
 
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);

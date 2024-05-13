@@ -31,6 +31,7 @@ namespace TwoCaptcha.Tests
             parameters["lang"] = "en";
             parameters["textinstructions"] = "Put the images in the correct way up";
             parameters["body"] = base64EncodedImage;
+            parameters["soft_id"] = "4582";
 
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);

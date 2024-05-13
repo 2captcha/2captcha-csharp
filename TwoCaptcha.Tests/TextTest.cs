@@ -18,6 +18,7 @@ namespace TwoCaptcha.Tests
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
             parameters["textcaptcha"] = question;
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -31,6 +32,7 @@ namespace TwoCaptcha.Tests
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
             parameters["textcaptcha"] = question;
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -46,6 +48,7 @@ namespace TwoCaptcha.Tests
             parameters["method"] = "post";
             parameters["textcaptcha"] = question;
             parameters["lang"] = "en";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

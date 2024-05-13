@@ -21,6 +21,7 @@ namespace TwoCaptcha.Tests
             parameters["captcha_id"] = "CROPPED_d3d4d56_73ca4008925b4f83a8bed59c2dd0df6d";
             parameters["api_server"] = "api.leminnow.com";
             parameters["pageurl"] = "http://sat2.aksigorta.com.tr";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
