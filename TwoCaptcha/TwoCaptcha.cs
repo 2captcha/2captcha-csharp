@@ -21,7 +21,7 @@ namespace TwoCaptcha
          * ID of software developer. Developers who integrated their software
          * with our service get reward: 10% of spendings of their software users.
          */
-        public int SoftId { get; set; }
+        public int SoftId { get; set; } = 4582;
 
         /**
          * URL to which the result will be sent
