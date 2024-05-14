@@ -33,7 +33,6 @@ The easiest way to quickly integrate [2Captcha] into your code to automate solvi
     - [report](#report)
   - [Proxies](#proxies)
   - [Error handling](#error-handling)
-  - [Useful links](#useful-links)
 
 ## Installation
 Install nuget package from [nuget]
@@ -394,11 +393,11 @@ catch (TimeoutException e)
 }
 ```
 
-## Useful links
-- [nuget](https://www.nuget.org/packages/2captcha-csharp/)
-- [2Captcha](https://2captcha.com/)
-- [2captcha sofware catalog](https://2captcha.com/software)
-- [Pingback settings](https://2captcha.com/setting/pingback)
-- [Post options](https://2captcha.com/2captcha-api#normal_post)
-- [list of supported languages](https://2captcha.com/2captcha-api#language)
-- [Examples directory](./TwoCaptcha.Examples)
+<!-- Shared links -->
+[nuget]: https://www.nuget.org/packages/2captcha-csharp/
+[2Captcha]: https://2captcha.com/
+[2captcha sofware catalog]: https://2captcha.com/software
+[Pingback settings]: https://2captcha.com/setting/pingback
+[Post options]: https://2captcha.com/2captcha-api#normal_post
+[list of supported languages]: https://2captcha.com/2captcha-api#language
+[Examples directory]: /TwoCaptcha.Examples
