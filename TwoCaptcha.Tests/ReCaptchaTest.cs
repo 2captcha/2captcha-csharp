@@ -28,6 +28,7 @@ namespace TwoCaptcha.Tests
             parameters["action"] = "verify";
             parameters["domain"] = "recaptcha.net";
             parameters["data-s"] = "foo";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -51,6 +52,7 @@ namespace TwoCaptcha.Tests
             parameters["action"] = "verify";
             parameters["min_score"] = "0.3";
             parameters["domain"] = "recaptcha.net";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

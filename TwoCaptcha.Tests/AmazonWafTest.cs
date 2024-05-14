@@ -23,6 +23,7 @@ namespace TwoCaptcha.Tests
             parameters["pageurl"] = "https://non-existent-example.execute-api.us-east-1.amazonaws.com";
             parameters["context"] = "test_iv";
             parameters["iv"] = "test_context";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

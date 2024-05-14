@@ -30,6 +30,7 @@ namespace TwoCaptcha.Tests
             parameters["recaptcha"] = "1";
             parameters["canvas"] = "1";
             parameters["textinstructions"] = hintText;
+            parameters["soft_id"] = "4582";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;
@@ -50,6 +51,7 @@ namespace TwoCaptcha.Tests
             parameters["canvas"] = "1";
             parameters["body"] = "...";
             parameters["textinstructions"] = hintText;
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -76,6 +78,7 @@ namespace TwoCaptcha.Tests
             parameters["can_no_answer"] = "0";
             parameters["lang"] = "en";
             parameters["textinstructions"] = hintText;
+            parameters["soft_id"] = "4582";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;

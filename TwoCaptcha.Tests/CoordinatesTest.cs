@@ -24,6 +24,7 @@ namespace TwoCaptcha.Tests
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
             parameters["coordinatescaptcha"] = "1";
+            parameters["soft_id"] = "4582";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;
@@ -42,6 +43,7 @@ namespace TwoCaptcha.Tests
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "post";
             parameters["coordinatescaptcha"] = "1";
+            parameters["soft_id"] = "4582";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;
@@ -59,6 +61,7 @@ namespace TwoCaptcha.Tests
             parameters["method"] = "base64";
             parameters["coordinatescaptcha"] = "1";
             parameters["body"] = "...";
+            parameters["soft_id"] = "4582";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -80,6 +83,7 @@ namespace TwoCaptcha.Tests
             parameters["coordinatescaptcha"] = "1";
             parameters["lang"] = "en";
             parameters["textinstructions"] = hintText;
+            parameters["soft_id"] = "4582";
 
             var files = new Dictionary<string, FileInfo>();
             files["file"] = image;

@@ -27,6 +27,7 @@ namespace TwoCaptcha.Tests
             parameters["method"] = "audio";
             parameters["lang"] = "en";
             parameters["body"] = base64EncodedImage;
+            parameters["soft_id"] = "4582";
 
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
