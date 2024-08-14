@@ -11,7 +11,7 @@
 The easiest way to quickly integrate [2Captcha] into your code to automate solving of any types of captcha.
 Examples of API requests for different captcha types are available on the [C# captcha solver](https://2captcha.com/lang/csharp) page.
 
-- [C# Module for 2Captcha API (captcha solver)](#c-module-for-2captcha-api-captcha-solver) 
+- [C# Module for 2Captcha API (captcha solver)](#c-module-for-2captcha-api-captcha-solver)
   - [Installation](#installation)
   - [Configuration](#configuration)
     - [TwoCaptcha instance options](#twocaptcha-instance-options)
@@ -37,16 +37,17 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Lemin](#lemin)
     - [Turnstile](#turnstile)
     - [AmazonWaf](#amazonwaf)
+    - [Friendly Captcha](#friendly-captcha)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
     - [report](#report)
   - [Proxies](#proxies)
   - [Error handling](#error-handling)
-- [Get in touch](#get-in-touch)
-- [Join the team 👪](#join-the-team-)
+  - [Get in touch](#get-in-touch)
+  - [Join the team 👪](#join-the-team-)
 - [License](#license)
-  - [Graphics and Trademarks](#graphics-and-trademarks)
+    - [Graphics and Trademarks](#graphics-and-trademarks)
 
 ## Installation
 Install nuget package from [nuget]
@@ -341,6 +342,15 @@ captcha.SetSiteKey("AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AF5H1K/siwS
 captcha.SetUrl("https://non-existent-example.execute-api.us-east-1.amazonaws.com");
 captcha.SetContext("test_iv");
 captcha.SetIV("test_context");
+```
+
+### Friendly Captcha
+Use this method to solve Friendly Captcha. Returns a token to bypass the captcha.
+
+```csharp
+FriendlyCaptcha captcha = new FriendlyCaptcha();
+captcha.SetSiteKey("2FZFEVS1FZCGQ9");
+captcha.SetUrl("https://example.com");
 ```
 
 
