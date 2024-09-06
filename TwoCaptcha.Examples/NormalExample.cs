@@ -6,7 +6,7 @@ namespace TwoCaptcha.Examples
 {
     public class NormalExample
     {
-        public static void Main()
+        public NormalExample()
         {
             var solver = new TwoCaptcha("YOUR_API_KEY");
 
