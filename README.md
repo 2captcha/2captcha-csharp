@@ -38,6 +38,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Turnstile](#turnstile)
     - [AmazonWaf](#amazonwaf)
     - [Friendly Captcha](#friendly-captcha)
+    - [MT Captcha](#mt-captcha)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -353,6 +354,14 @@ captcha.SetSiteKey("2FZFEVS1FZCGQ9");
 captcha.SetUrl("https://example.com");
 ```
 
+### MT Captcha
+Use this method to solve MT Captcha. Returns a token to bypass the captcha.
+
+```csharp
+MTCaptcha captcha = new MTCaptcha();
+captcha.SetSiteKey("MTPublic-KzqLY1cKH");
+captcha.SetPageUrl("https://2captcha.com/demo/mtcaptcha");
+```
 
 ## Other methods
 
