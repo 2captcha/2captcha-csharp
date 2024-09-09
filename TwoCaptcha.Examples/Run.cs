@@ -15,6 +15,10 @@ public class Run
                 TextExample textExample = new TextExample(apiKey);
                 break;
 
+            case "MTCaptchaExample":
+                MTCaptchaExample mtCaptchaExample = new MTCaptchaExample(apiKey);
+                break;
+
         }
     }
 }
