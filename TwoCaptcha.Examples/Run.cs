@@ -23,6 +23,9 @@ public class Run
                 CutcaptchaExample cutcaptchaExample = new CutcaptchaExample(apiKey);
                 break;
 
+            case "CyberSiARAExample":
+                CyberSiARAExample cyberSiARAExample = new CyberSiARAExample(apiKey);
+                break;
         }
     }
 }

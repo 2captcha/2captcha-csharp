@@ -39,6 +39,8 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [AmazonWaf](#amazonwaf)
     - [Friendly Captcha](#friendly-captcha)
     - [MT Captcha](#mt-captcha)
+    - [Cutcaptcha](#cutcaptcha)
+    - [CyberSiARA](#cyberSiARA)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -372,6 +374,18 @@ captcha.SetMiseryKey("a1488b66da00bf332a1488993a5443c79047e752");
 captcha.SetPageUrl("https://example.cc/foo/bar.html");
 captcha.SetApiKey("SAb83IIB");
 ```
+
+### CyberSiARA
+Use this method to solve Cutcaptcha. Returns a token to bypass the captcha.
+
+```csharp
+CyberSiARA cyberSiARA = new CyberSiARA();
+cyberSiARA.SetMasterUrlId("tpjOCKjjpdzv3d8Ub2E9COEWKt1vl1Mv");
+cyberSiARA.SetPageUrl("https://demo.mycybersiara.com/");
+cyberSiARA.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36");
+
+```
+
 
 
 ## Other methods
