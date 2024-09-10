@@ -13,7 +13,7 @@ namespace TwoCaptcha.Examples
             Cutcaptcha cutcaptcha = new Cutcaptcha();
             cutcaptcha.SetMiseryKey("a1488b66da00bf332a1488993a5443c79047e752");
             cutcaptcha.SetPageUrl("https://example.cc/foo/bar.html");
-            //cutcaptcha.SetApiKey("SAb83IIB");
+            cutcaptcha.SetApiKey("SAb83IIB");
 
             try
             {

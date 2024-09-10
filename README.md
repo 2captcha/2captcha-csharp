@@ -363,6 +363,17 @@ captcha.SetSiteKey("MTPublic-KzqLY1cKH");
 captcha.SetPageUrl("https://2captcha.com/demo/mtcaptcha");
 ```
 
+### Cutcaptcha
+Use this method to solve Cutcaptcha. Returns a token to bypass the captcha.
+
+```csharp
+Cutcaptcha captcha = new Cutcaptcha();
+captcha.SetMiseryKey("a1488b66da00bf332a1488993a5443c79047e752");
+captcha.SetPageUrl("https://example.cc/foo/bar.html");
+captcha.SetApiKey("SAb83IIB");
+```
+
+
 ## Other methods
 
 ### send / getResult
