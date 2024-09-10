@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using TwoCaptcha.Captcha;
 
 namespace TwoCaptcha.Examples
@@ -28,14 +26,3 @@ namespace TwoCaptcha.Examples
         }
     }
 }
-
-
-/*
- {
-    "key":"YOUR_API_KEY",
-    "method":"mt_captcha",
-    "sitekey":"MTPublic-KzqLY1cKH",
-    "pageurl":"https://2captcha.com/demo/mtcaptcha",
-    "json": 1
-}*/
- 

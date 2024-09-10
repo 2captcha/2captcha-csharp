@@ -19,6 +19,10 @@ public class Run
                 MTCaptchaExample mtCaptchaExample = new MTCaptchaExample(apiKey);
                 break;
 
+            case "CutcaptchaExample":
+                CutcaptchaExample cutcaptchaExample = new CutcaptchaExample(apiKey);
+                break;
+
         }
     }
 }
