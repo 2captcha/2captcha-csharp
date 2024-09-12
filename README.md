@@ -384,7 +384,6 @@ CyberSiARA cyberSiARA = new CyberSiARA();
 cyberSiARA.SetMasterUrlId("tpjOCKjjpdzv3d8Ub2E9COEWKt1vl1Mv");
 cyberSiARA.SetPageUrl("https://demo.mycybersiara.com/");
 cyberSiARA.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36");
-
 ```
 
 ### DataDome
@@ -396,7 +395,7 @@ dataDome.SetCapthaUrl("https://geo.captcha-delivery.com/captcha/?initialCid=AHrl
 dataDome.SetPageUrl("https://example.com/");
 dataDome.SetProxy("http", "username:password@1.2.3.4:5678");
 dataDome.SetUserAgent("Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.3");```
-
+```
 
 ## Other methods
 
