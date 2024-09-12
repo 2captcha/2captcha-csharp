@@ -41,6 +41,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [MT Captcha](#mt-captcha)
     - [Cutcaptcha](#cutcaptcha)
     - [CyberSiARA](#cyberSiARA)
+    - [DataDome](#datadome)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -386,6 +387,15 @@ cyberSiARA.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 ```
 
+### DataDome
+Use this method to solve DataDome. Returns a token to bypass the captcha.
+
+```csharp
+DataDome dataDome = new DataDome();
+dataDome.SetCapthaUrl("https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAA...P~XFrBVptk&t=fe&referer=https%3A%2F%2Fhexample.com&s=45239&e=c538be..c510a00ea");
+dataDome.SetPageUrl("https://example.com/");
+dataDome.SetProxy("http", "username:password@1.2.3.4:5678");
+dataDome.SetUserAgent("Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.3");```
 
 
 ## Other methods

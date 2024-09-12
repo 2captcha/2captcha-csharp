@@ -26,6 +26,11 @@ public class Run
             case "CyberSiARAExample":
                 CyberSiARAExample cyberSiARAExample = new CyberSiARAExample(apiKey);
                 break;
+
+            case "DataDomeExample":
+                DataDomeExample dataDomeExample = new DataDomeExample(apiKey);
+                break;
+                
         }
     }
 }
