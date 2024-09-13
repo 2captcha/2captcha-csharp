@@ -30,7 +30,11 @@ public class Run
             case "DataDomeExample":
                 DataDomeExample dataDomeExample = new DataDomeExample(apiKey);
                 break;
-                
+
+            case "AtbCAPTCHAExample":
+                AtbCAPTCHAExample atbCAPTCHAExample = new AtbCAPTCHAExample(apiKey);
+                break;
+
         }
     }
 }

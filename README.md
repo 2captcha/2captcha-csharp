@@ -42,6 +42,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Cutcaptcha](#cutcaptcha)
     - [CyberSiARA](#cyberSiARA)
     - [DataDome](#datadome)
+    - [atbCAPTCHA](atbcaptcha)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -395,6 +396,16 @@ dataDome.SetCapthaUrl("https://geo.captcha-delivery.com/captcha/?initialCid=AHrl
 dataDome.SetPageUrl("https://example.com/");
 dataDome.SetProxy("http", "username:password@1.2.3.4:5678");
 dataDome.SetUserAgent("Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.3");```
+```
+
+### atbCAPTCHA
+Use this method to solve atbCAPTCHA. Returns a token to bypass the captcha.
+
+```csharp
+AtbCAPTCHA atbCAPTCHA = new AtbCAPTCHA();
+atbCAPTCHA.SetAppId("af23e041b22d000a11e22a230fa8991c");
+atbCAPTCHA.SetApiServer("https://cap.aisecurius.com");
+atbCAPTCHA.SetPageUrl("https://www.example.com/");
 ```
 
 ## Other methods
