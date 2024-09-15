@@ -42,7 +42,8 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Cutcaptcha](#cutcaptcha)
     - [CyberSiARA](#cyberSiARA)
     - [DataDome](#datadome)
-    - [atbCAPTCHA](atbcaptcha)
+    - [atbCAPTCHA](#atbcaptcha)
+    - [Tencent](#tencent)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -407,6 +408,16 @@ atbCAPTCHA.SetAppId("af23e041b22d000a11e22a230fa8991c");
 atbCAPTCHA.SetApiServer("https://cap.aisecurius.com");
 atbCAPTCHA.SetPageUrl("https://www.example.com/");
 ```
+
+### Tencent
+Use this method to solve Tencent captcha. Returns a token to bypass the captcha.
+
+```csharp
+Tencent tencent = new Tencent();
+tencent.SetAppId("190014885");
+tencent.SetPageUrl("https://www.example.com/");
+```
+
 
 ## Other methods
 

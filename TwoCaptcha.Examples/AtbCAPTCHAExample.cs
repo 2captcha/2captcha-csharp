@@ -27,13 +27,3 @@ namespace TwoCaptcha.Examples
         }
     }
 }
-
-/*
- {
-    "key": "YOUR_API_KEY",
-    "method": "atb_captcha",
-    "app_id": "af23e041b22d000a11e22a230fa8991c",
-    "api_server": "https://cap.aisecurius.com",
-    "pageurl": "https://www.example.com/",
-    "json": 1
-}*/

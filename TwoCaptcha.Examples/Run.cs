@@ -35,6 +35,10 @@ public class Run
                 AtbCAPTCHAExample atbCAPTCHAExample = new AtbCAPTCHAExample(apiKey);
                 break;
 
+            case "TencentExample":
+                TencentExample tencentExample = new TencentExample(apiKey);
+                break; 
+
         }
     }
 }
