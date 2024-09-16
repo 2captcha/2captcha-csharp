@@ -5,7 +5,7 @@ namespace TwoCaptcha.Captcha
     {
         public Tencent() : base()
         {
-            parameters["method"] = "tencent ";
+            parameters["method"] = "tencent";
         }
 
         public void SetPageUrl(string url)
