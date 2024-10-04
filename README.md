@@ -38,7 +38,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Turnstile](#turnstile)
     - [AmazonWaf](#amazonwaf)
     - [Friendly Captcha](#friendly-captcha)
-    - [MT Captcha](#mt-captcha)
+    - [MTCaptcha](#mtcaptcha)
     - [Cutcaptcha](#cutcaptcha)
     - [CyberSiARA](#cyberSiARA)
     - [DataDome](#datadome)
@@ -359,8 +359,8 @@ captcha.SetSiteKey("2FZFEVS1FZCGQ9");
 captcha.SetUrl("https://example.com");
 ```
 
-### MT Captcha
-Use this method to solve MT Captcha. Returns a token to bypass the captcha.
+### MTCaptcha
+Use this method to solve MTCaptcha. Returns a token to bypass the captcha.
 
 ```csharp
 MTCaptcha captcha = new MTCaptcha();
@@ -379,7 +379,7 @@ captcha.SetApiKey("SAb83IIB");
 ```
 
 ### CyberSiARA
-Use this method to solve Cutcaptcha. Returns a token to bypass the captcha.
+Use this method to solve CyberSiARA. Returns a token to bypass the captcha.
 
 ```csharp
 CyberSiARA cyberSiARA = new CyberSiARA();
@@ -391,12 +391,15 @@ cyberSiARA.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 ### DataDome
 Use this method to solve DataDome. Returns a token to bypass the captcha.
 
+> [!IMPORTANT]
+> To solve the DataDome captcha, you must use a proxy. It is recommended to use [residential proxies].
+
 ```csharp
 DataDome dataDome = new DataDome();
 dataDome.SetCapthaUrl("https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAA...P~XFrBVptk&t=fe&referer=https%3A%2F%2Fhexample.com&s=45239&e=c538be..c510a00ea");
 dataDome.SetPageUrl("https://example.com/");
 dataDome.SetProxy("http", "username:password@1.2.3.4:5678");
-dataDome.SetUserAgent("Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.3");```
+dataDome.SetUserAgent("Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.3");
 ```
 
 ### atbCAPTCHA
@@ -510,3 +513,4 @@ The graphics and trademarks included in this repository are not covered by the M
 [Post options]: https://2captcha.com/2captcha-api#normal_post
 [list of supported languages]: https://2captcha.com/2captcha-api#language
 [Examples directory]: /TwoCaptcha.Examples
+[residential proxies]: https://2captcha.com/proxy/residential-proxies
