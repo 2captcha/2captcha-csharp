@@ -1,11 +1,11 @@
-<a href="https://github.com/2captcha/2captcha-python"><img src="https://github.com/user-attachments/assets/37e1d860-033b-4cf3-a158-468fc6b4debc" width="82" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-javascript"><img src="https://github.com/user-attachments/assets/e81e9714-7bd8-40f9-971c-b08bf9da6b97" width="36" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-go"><img src="https://github.com/user-attachments/assets/ab22182e-6cb2-41fa-91f4-d5e89c6d7c6f" width="63" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-ruby"><img src="https://github.com/user-attachments/assets/0270d56f-79b0-4c95-9b09-4de89579914b" width="75" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-cpp"><img src="https://github.com/user-attachments/assets/36de8512-acfd-44fb-bb1f-b7c793a3f926" width="45" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-php"><img src="https://github.com/user-attachments/assets/e8797843-3f61-4fa9-a155-ab0b21fb3858" width="52" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-java"><img src="https://github.com/user-attachments/assets/a3d923f6-4fec-4c07-ac50-e20da6370911" width="50" height="30"></a>
-<a href="https://github.com/2captcha/2captcha-csharp"><img src="https://github.com/user-attachments/assets/4dff0a3e-0ed7-46bd-8c59-4b95451aa54d" width="38" height="30"></a>
+<a href="https://github.com/2captcha/2captcha-python"><img src="https://github.com/user-attachments/assets/37e1d860-033b-4cf3-a158-468fc6b4debc" width="82" height="30" alt="python library"></a>
+<a href="https://github.com/2captcha/2captcha-javascript"><img src="https://github.com/user-attachments/assets/e81e9714-7bd8-40f9-971c-b08bf9da6b97" width="36" height="30" alt="javascript library"></a>
+<a href="https://github.com/2captcha/2captcha-go"><img src="https://github.com/user-attachments/assets/ab22182e-6cb2-41fa-91f4-d5e89c6d7c6f" width="63" height="30" alt="go library"></a>
+<a href="https://github.com/2captcha/2captcha-ruby"><img src="https://github.com/user-attachments/assets/0270d56f-79b0-4c95-9b09-4de89579914b" width="75" height="30" alt="ruby library"></a>
+<a href="https://github.com/2captcha/2captcha-cpp"><img src="https://github.com/user-attachments/assets/36de8512-acfd-44fb-bb1f-b7c793a3f926" width="45" height="30" alt="cpp library"></a>
+<a href="https://github.com/2captcha/2captcha-php"><img src="https://github.com/user-attachments/assets/e8797843-3f61-4fa9-a155-ab0b21fb3858" width="52" height="30" alt="php library"></a>
+<a href="https://github.com/2captcha/2captcha-java"><img src="https://github.com/user-attachments/assets/a3d923f6-4fec-4c07-ac50-e20da6370911" width="50" height="30" alt="java library"></a>
+<a href="https://github.com/2captcha/2captcha-csharp"><img src="https://github.com/user-attachments/assets/4dff0a3e-0ed7-46bd-8c59-4b95451aa54d" width="38" height="30" alt="csharp library"></a>
 
 # C# Module for 2Captcha API (captcha solver)
 The easiest way to quickly integrate [2Captcha] into your code to automate solving of any types of captcha.
@@ -20,11 +20,11 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Basic example](#basic-example)
     - [Normal Captcha](#normal-captcha)
     - [Text Captcha](#text-captcha)
-    - [ReCaptcha v2](#recaptcha-v2)
-    - [ReCaptcha v3](#recaptcha-v3)
+    - [reCAPTCHA v2](#recaptcha-v2)
+    - [reCAPTCHA v3](#recaptcha-v3)
     - [FunCaptcha](#funcaptcha)
     - [GeeTest](#geetest)
-    - [GeeTestV4](#geetestv4)
+    - [GeeTest v4](#geetest-v4)
     - [hCaptcha](#hcaptcha)
     - [KeyCaptcha](#keycaptcha)
     - [Capy](#capy)
@@ -32,15 +32,15 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Canvas](#canvas)
     - [ClickCaptcha](#clickcaptcha)
     - [Rotate](#rotate)
-    - [Audio](#audio)
+    - [Audio Captcha](#audio-captcha)
     - [Yandex](#yandex)
-    - [Lemin](#lemin)
-    - [Turnstile](#turnstile)
-    - [AmazonWaf](#amazonwaf)
+    - [Lemin Cropped Captcha](#lemin-cropped-captcha)
+    - [Cloudflare Turnstile](#cloudflare-turnstile)
+    - [Amazon WAF](#amazon-waf)
     - [Friendly Captcha](#friendly-captcha)
     - [MTCaptcha](#mtcaptcha)
     - [Cutcaptcha](#cutcaptcha)
-    - [CyberSiARA](#cyberSiARA)
+    - [CyberSiARA](#cybersiara)
     - [DataDome](#datadome)
     - [atbCAPTCHA](#atbcaptcha)
     - [Tencent](#tencent)
@@ -56,7 +56,9 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Graphics and Trademarks](#graphics-and-trademarks)
 
 ## Installation
-Install nuget package from [nuget]
+Install nuget package from [nuget]:
+
+`dotnet add package 2captcha-csharp`
 
 ## Configuration
 `TwoCaptcha` instance can be created like this:
@@ -76,10 +78,10 @@ solver.PollingInterval = 10;
 
 | Option           | Default value | Description                                                                                                                                        |
 | ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| softId           | -             | your software ID obtained after publishing in [2captcha sofware catalog]                                                                           |
+| softId           | 4582             | your software ID obtained after publishing in [2captcha sofware catalog]                                                                           |
 | callback         | -             | URL of your web-sever that receives the captcha recognition result. The URl should be first registered in [pingback settings] of your account      |
-| defaultTimeout   | 120           | Polling timeout in seconds for all captcha types except ReCaptcha. Defines how long the module tries to get the answer from `res.php` API endpoint |
-| recaptchaTimeout | 600           | Polling timeout for ReCaptcha in seconds. Defines how long the module tries to get the answer from `res.php` API endpoint                          |
+| defaultTimeout   | 120           | Polling timeout in seconds for all captcha types except reCAPTCHA. Defines how long the module tries to get the answer from `res.php` API endpoint |
+| recaptchaTimeout | 600           | Polling timeout for reCAPTCHA in seconds. Defines how long the module tries to get the answer from `res.php` API endpoint                          |
 | pollingInterval  | 10            | Interval in seconds between requests to `res.php` API endpoint, setting values less than 5 seconds is not recommended                              |
 
 >  **IMPORTANT:** once `Callback` is defined for `TwoCaptcha` instance, all methods return only the captcha ID and DO NOT poll the API to get the result. The result will be sent to the callback URL.
@@ -126,6 +128,9 @@ catch (Exception e)
 ```
 
 ### Normal Captcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_normal_captcha)</sup>
+
 To bypass a normal captcha (distorted text on image) use the following method. This method also can be used to recognize any text on the image.
 
 ```csharp
@@ -143,6 +148,9 @@ captcha.SetHintText("Type red symbols only");
 ```
 
 ### Text Captcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_text_captcha)</sup>
+
 This method can be used to bypass a captcha that requires to answer a question provided in clear text.
 
 ```csharp
@@ -151,8 +159,11 @@ captcha.SetText("If tomorrow is Saturday, what day is today?");
 captcha.SetLang("en");
 ```
 
-### ReCaptcha v2
-Use this method to solve ReCaptcha V2 and obtain a token to bypass the protection.
+### reCAPTCHA v2
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_recaptchav2_new)</sup>
+
+Use this method to solve reCAPTCHA V2 and obtain a token to bypass the protection.
 
 ```csharp
 ReCaptcha captcha = new ReCaptcha();
@@ -163,8 +174,11 @@ captcha.SetEnterprise(false);
 captcha.SetAction("verify");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
-### ReCaptcha v3
-This method provides ReCaptcha V3 solver and returns a token.
+### reCAPTCHA v3
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_recaptchav3)</sup>
+
+This method provides reCAPTCHA V3 solver and returns a token.
 
 ```csharp
 ReCaptcha captcha = new ReCaptcha();
@@ -179,6 +193,9 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ### FunCaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_funcaptcha_new)</sup>
+
 FunCaptcha (Arkoselabs) solving method. Returns a token.
 
 ```csharp
@@ -192,6 +209,9 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ### GeeTest
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_geetest)</sup>
+
 Method to solve GeeTest puzzle captcha. Returns a set of tokens as JSON.
 
 ```csharp
@@ -203,8 +223,11 @@ captcha.SetUrl("https://mysite.com/captcha.html");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
-### GeeTestV4
-Method to solve GeeTestV4 puzzle captcha. Returns a set of tokens as JSON.
+### GeeTest v4
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#geetest-v4)</sup>
+
+Method to solve GeeTest v4 puzzle captcha. Returns a set of tokens as JSON.
 
 ```csharp
 GeeTestV4 captcha = new GeeTestV4();
@@ -214,6 +237,9 @@ captcha.SetUrl("https://mysite.com/captcha.html");
 ```
 
 ### hCaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_hcaptcha)</sup>
+
 Use this method to solve hCaptcha challenge. Returns a token to bypass captcha.
 
 ```csharp
@@ -225,6 +251,9 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ### KeyCaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_keycaptcha)</sup>
+
 Token-based method to solve KeyCaptcha.
 
 ```csharp
@@ -238,6 +267,9 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ### Capy
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_capy)</sup>
+
 Token-based method to bypass Capy puzzle captcha.
 
 ```csharp
@@ -248,7 +280,10 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ### Grid
-Grid method is originally called Old ReCaptcha V2 method. The method can be used to bypass any type of captcha where you can apply a grid on image and need to click specific grid boxes. Returns numbers of boxes.
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#grid)</sup>
+
+Grid method is originally called Old reCAPTCHA V2 method. The method can be used to bypass any type of captcha where you can apply a grid on image and need to click specific grid boxes. Returns numbers of boxes.
 
 ```csharp
 Grid captcha = new Grid();
@@ -263,6 +298,9 @@ captcha.SetHintText("Select all images with an Orange");
 ```
 
 ### Canvas
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#canvas)</sup>
+
 Canvas method can be used when you need to draw a line around an object on image. Returns a set of points' coordinates to draw a polygon.
 
 ```csharp
@@ -276,6 +314,9 @@ captcha.SetHintText("Draw around apple");
 ```
 
 ### ClickCaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#coordinates)</sup>
+
 ClickCaptcha method returns coordinates of points on captcha image. Can be used if you need to click on particular points on the image.
 
 ```csharp
@@ -287,6 +328,9 @@ captcha.SetHintText("Select all images with an Orange");
 ```
 
 ### Rotate
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#solving_rotatecaptcha)</sup>
+
 This method can be used to solve a captcha that asks to rotate an object. Mostly used to bypass FunCaptcha. Returns the rotation angle.
 
 ```csharp
@@ -298,8 +342,12 @@ captcha.SetHintImg(new FileInfo("path/to/hint.jpg"));
 captcha.SetHintText("Put the images in the correct way up");
 ```
 
-### Audio
-This method can be used to solve a audio captcha
+### Audio Captcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#audio)</sup>
+
+This method can be used to solve a audio captcha (mp3 formats only).
+You must provide the language as `lang = 'en'`. Supported languages are "en", "ru", "de", "el", "pt", "fr".
 
 ```csharp
 AudioCaptcha captcha = new AudioCaptcha();
@@ -309,6 +357,7 @@ captcha.SetBase64(base64EncodedImage);
 ```
 
 ### Yandex
+
 Use this method to solve Yandex and obtain a token to bypass the protection.
 
 ```csharp
@@ -317,7 +366,10 @@ captcha.SetSiteKey("Y5Lh0tiycconMJGsFd3EbbuNKSp1yaZESUOIHfeV");
 captcha.SetUrl("https://rutube.ru");
 ```
 
-### Lemin
+### Lemin Cropped Captcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#lemin)</sup>
+
 Use this method to solve Lemin and obtain a token to bypass the protection.
 
 ```csharp
@@ -327,8 +379,11 @@ captcha.SetApiServer("api.leminnow.com");
 captcha.SetUrl("http://sat2.aksigorta.com.tr");
 ```
 
-### Turnstile
-Use this method to solve Turnstile and obtain a token to bypass the protection.
+### Cloudflare Turnstile
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#turnstile)</sup>
+
+Use this method to solve Cloudflare Turnstile and obtain a token to bypass the protection.
 
 ```csharp
 Turnstile captcha = new Turnstile();
@@ -339,8 +394,11 @@ captcha.SetPageData("bar");
 captcha.SetAction("baz");
 ```
 
-### AmazonWaf
-Use this method to solve AmazonWaf and obtain a token to bypass the protection.
+### Amazon WAF
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#amazon-waf)</sup>
+
+Use this method to solve Amazon WAF Captcha also known as AWS WAF Captcha is a part of Intelligent threat mitigation for Amazon AWS. Returns JSON with the token.
 
 ```csharp
 AmazonWaf captcha = new AmazonWaf();
@@ -351,7 +409,13 @@ captcha.SetIV("test_context");
 ```
 
 ### Friendly Captcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#friendly-captcha)</sup>
+
 Use this method to solve Friendly Captcha. Returns a token to bypass the captcha.
+
+> [!IMPORTANT]
+> To successfully use the received token, the captcha widget must not be loaded on the page. To do this, you need to abort request to `/friendlycaptcha/...module.min.js` on the page. When the captcha widget is already loaded on the page, there is a high probability that the received token will not work.
 
 ```csharp
 FriendlyCaptcha captcha = new FriendlyCaptcha();
@@ -360,6 +424,9 @@ captcha.SetUrl("https://example.com");
 ```
 
 ### MTCaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#mtcaptcha)</sup>
+
 Use this method to solve MTCaptcha. Returns a token to bypass the captcha.
 
 ```csharp
@@ -369,6 +436,9 @@ captcha.SetPageUrl("https://2captcha.com/demo/mtcaptcha");
 ```
 
 ### Cutcaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#cutcaptcha)</sup>
+
 Use this method to solve Cutcaptcha. Returns a token to bypass the captcha.
 
 ```csharp
@@ -379,6 +449,9 @@ captcha.SetApiKey("SAb83IIB");
 ```
 
 ### CyberSiARA
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#cybersiara)</sup>
+
 Use this method to solve CyberSiARA. Returns a token to bypass the captcha.
 
 ```csharp
@@ -389,7 +462,10 @@ cyberSiARA.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 ```
 
 ### DataDome
-Use this method to solve DataDome. Returns a token to bypass the captcha.
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#datadome)</sup>
+
+Use this method to solve DataDome captcha.
 
 > [!IMPORTANT]
 > To solve the DataDome captcha, you must use a proxy. It is recommended to use [residential proxies].
@@ -403,6 +479,9 @@ dataDome.SetUserAgent("Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KH
 ```
 
 ### atbCAPTCHA
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#atb-captcha)</sup>
+
 Use this method to solve atbCAPTCHA. Returns a token to bypass the captcha.
 
 ```csharp
@@ -413,6 +492,9 @@ atbCAPTCHA.SetPageUrl("https://www.example.com/");
 ```
 
 ### Tencent
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#tencent)</sup>
+
 Use this method to solve Tencent captcha. Returns a token to bypass the captcha.
 
 ```csharp
@@ -435,12 +517,18 @@ Task.sleep(20 * 1000);
 string code = await solver.GetResult(captchaId);
 ```
 ### balance
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#additional-methods)</sup>
+
 Use this method to get your account's balance
 
 ```csharp
 double balance = await solver.Balance();
 ```
 ### report
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#complain)</sup>
+
 Use this method to report good or bad captcha answer.
 
 ```csharp
@@ -449,9 +537,9 @@ await solver.Report(captcha.Id, false); // captcha solved incorrectly
 ```
 ## Proxies
 
-You can pass your proxy as an additional argument for methods: recaptcha, funcaptcha, geetest, geetest v4, hcaptcha, keycaptcha, capy puzzle, lemin, turnstile, amazon waf and etc. The proxy will be forwarded to the API to solve the captcha.
+You can pass your proxy as an additional argument for methods: recaptcha, funcaptcha, geetest, geetest v4, hcaptcha, keycaptcha, capy puzzle, lemin, cloudflare turnstile, amazon waf, friendly captcha, mtcaptcha, cutcaptcha, cybersiara, datadome, atbcaptcha, tencent and etc. The proxy will be forwarded to the API to solve the captcha.
 
-We have our own proxies that we can offer you. [Buy residential proxies](https://2captcha.com/proxy/residential-proxies) for avoid restrictions and blocks. [Quick start](https://2captcha.com/proxy?openAddTrafficModal=true).
+We have our own proxies that we can offer you. [Buy residential proxies] for avoid restrictions and blocks. [Quick start].
 
 ```csharp
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
@@ -460,7 +548,7 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 
 ## Error handling
 If case of an error captcha solver throws an exception. It's important to properly handle these cases. We recommend to use `try catch` to handle exceptions.
-
+The list of all errors can be found in the  [API documentation](https://2captcha.com/2captcha-api#list-of-inphp-errors).
 
 ```csharp
 try
@@ -487,14 +575,14 @@ catch (TimeoutException e)
 
 ## Get in touch
 
-<a href="mailto:support@2captcha.com"><img src="https://github.com/user-attachments/assets/539df209-7c85-4fa5-84b4-fc22ab93fac7" width="80" height="30"></a>
-<a href="https://2captcha.com/support/tickets/new"><img src="https://github.com/user-attachments/assets/be044db5-2e67-46c6-8c81-04b78bd99650" width="81" height="30"></a>
+<a href="mailto:support@2captcha.com"><img src="https://github.com/user-attachments/assets/539df209-7c85-4fa5-84b4-fc22ab93fac7" width="80" height="30" alt="Send email to support"></a>
+<a href="https://2captcha.com/support/tickets/new"><img src="https://github.com/user-attachments/assets/be044db5-2e67-46c6-8c81-04b78bd99650" width="81" height="30" alt="Create ticket"></a>
 
 ## Join the team 👪
 
 There are many ways to contribute, of which development is only one! Find your next job. Open positions: AI experts, scrapers, developers, technical support, and much more! 😍
 
-<a href="mailto:job@2captcha.com"><img src="https://github.com/user-attachments/assets/36d23ef5-7866-4841-8e17-261cc8a4e033" width="80" height="30"></a>
+<a href="mailto:job@2captcha.com"><img src="https://github.com/user-attachments/assets/36d23ef5-7866-4841-8e17-261cc8a4e033" width="80" height="30" alt="Send email to support"></a>
 
 # License
 
@@ -514,3 +602,5 @@ The graphics and trademarks included in this repository are not covered by the M
 [list of supported languages]: https://2captcha.com/2captcha-api#language
 [Examples directory]: /TwoCaptcha.Examples
 [residential proxies]: https://2captcha.com/proxy/residential-proxies
+[Buy residential proxies]: https://2captcha.com/proxy/residential-proxies
+[Quick start]: https://2captcha.com/proxy?openAddTrafficModal=true
