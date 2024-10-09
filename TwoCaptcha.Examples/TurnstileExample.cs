@@ -6,9 +6,9 @@ namespace TwoCaptcha.Examples
 {
     public class TurnstileExample
     {
-        public void Main()
+        public TurnstileExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Turnstile captcha = new Turnstile();
             captcha.SetSiteKey("0x4AAAAAAAChNiVJM_WtShFf");

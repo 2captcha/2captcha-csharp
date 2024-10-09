@@ -7,15 +7,16 @@ namespace TwoCaptcha.Examples
 {
     public class GridBase64Example
     {
-        public void Main()
+        public GridBase64Example(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            byte[] bytes = File.ReadAllBytes("../../resources/grid.jpg");
+            byte[] bytes = File.ReadAllBytes("resources/grid.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
 
             Grid captcha = new Grid();
             captcha.SetBase64(base64EncodedImage);
+            captcha.SetHintText("Select all images with an Orange");
 
             try
             {

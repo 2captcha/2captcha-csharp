@@ -5,13 +5,13 @@ using TwoCaptcha.Captcha;
 
 namespace TwoCaptcha.Examples
 {
-    internal class AudioCaptchaOptionsExample
+    public class AudioCaptchaOptionsExample
     {
-        public void Main()
+        public AudioCaptchaOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            byte[] bytes = File.ReadAllBytes("../../resources/audio-ru.mp3");
+            byte[] bytes = File.ReadAllBytes("resources/audio-ru.mp3");
             string base64EncodedImage = Convert.ToBase64String(bytes);
 
             AudioCaptcha captcha = new AudioCaptcha();

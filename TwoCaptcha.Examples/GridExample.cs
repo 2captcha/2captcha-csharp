@@ -6,11 +6,12 @@ namespace TwoCaptcha.Examples
 {
     public class GridExample
     {
-        public void Main()
+        public GridExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            Grid captcha = new Grid("../../resources/grid.jpg");
+            Grid captcha = new Grid("resources/grid.jpg");
+            captcha.SetHintText("Select all images with an Orange");
 
             try
             {

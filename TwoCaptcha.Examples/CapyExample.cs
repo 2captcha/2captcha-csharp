@@ -6,9 +6,9 @@ namespace TwoCaptcha.Examples
 {
     public class CapyExample
     {
-        public void Main()
+        public CapyExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Capy captcha = new Capy();
             captcha.SetSiteKey("PUZZLE_Abc1dEFghIJKLM2no34P56q7rStu8v");

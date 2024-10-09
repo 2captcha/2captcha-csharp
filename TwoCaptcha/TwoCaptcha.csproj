@@ -5,6 +5,8 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Authors>2captcha</Authors>
         <Company>2captcha</Company>
+        <Description>C# library for easy integration with the API of 2captcha captcha solving service to bypass recaptcha, hcaptcha, funcaptcha, geetest and solve any other captchas.</Description>
+        <PackageTags>2Captcha;Captcha;reCAPTCHA;CAPTCHA solving;CAPTCHA bypass;C#;.NET;API;Image Recognition;Audio CAPTCHA;Solve CAPTCHA;Anti-bot;CAPTCHA service;CAPTCHA SDK</PackageTags>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFrameworks>netcoreapp3.1;net5.0;net6.0;net7.0</TargetFrameworks>

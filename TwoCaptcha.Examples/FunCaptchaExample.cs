@@ -5,10 +5,11 @@ using TwoCaptcha.Captcha;
 namespace TwoCaptcha.Examples
 {
     public class FunCaptchaExample
+    
     {
-        public void Main()
+        public FunCaptchaExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             FunCaptcha captcha = new FunCaptcha();
             captcha.SetSiteKey("69A21A01-CC7B-B9C6-0F9A-E7FA06677FFC");

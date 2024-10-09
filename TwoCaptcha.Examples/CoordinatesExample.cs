@@ -6,11 +6,11 @@ namespace TwoCaptcha.Examples
 {
     public class CoordinatesExample
     {
-        public void Main()
+        public CoordinatesExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            Coordinates captcha = new Coordinates("../../resources/grid.jpg");
+            Coordinates captcha = new Coordinates("resources/grid.jpg");
 
             try
             {

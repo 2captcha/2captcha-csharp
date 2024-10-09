@@ -6,11 +6,11 @@ namespace TwoCaptcha.Examples
 {
     public class NormalExample
     {
-        public static void Main()
+        public NormalExample(string apiKey)
         {
-            var solver = new TwoCaptcha("YOUR_API_KEY");
+            var solver = new TwoCaptcha(apiKey);
 
-            Normal captcha = new Normal("../../resources/normal.jpg");
+            Normal captcha = new Normal("resources/normal.jpg");
 
             try
             {

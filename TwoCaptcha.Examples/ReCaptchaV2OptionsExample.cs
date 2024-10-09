@@ -6,13 +6,13 @@ namespace TwoCaptcha.Examples
 {
     public class ReCaptchaV2OptionsExample
     {
-        public void Main()
+        public ReCaptchaV2OptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             ReCaptcha captcha = new ReCaptcha();
-            captcha.SetSiteKey("6Le-wvkSVVABCPBMRTvw0Q4Muexq1bi0DJwx_mJ-");
-            captcha.SetUrl("https://mysite.com/page/with/recaptcha");
+            captcha.SetSiteKey("6LfD3PIbAAAAAJs_eEHvoOl75_83eXSqpPSRFJ_u");
+            captcha.SetUrl("https://2captcha.com/demo/recaptcha-v2");
             captcha.SetInvisible(true);
             captcha.SetDomain("google.com");
             captcha.SetAction("verify");

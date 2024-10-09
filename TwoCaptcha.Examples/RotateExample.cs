@@ -7,11 +7,11 @@ namespace TwoCaptcha.Examples
 {
     public class RotateExample
     {
-        public void Main()
+        public RotateExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            byte[] bytes = File.ReadAllBytes("../../resources/rotate.jpg");
+            byte[] bytes = File.ReadAllBytes("resources/rotate.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
             Console.WriteLine("base64EncodedImage: " + base64EncodedImage);
 

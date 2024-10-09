@@ -7,11 +7,12 @@ namespace TwoCaptcha.Examples
 {
     public class NormalBase64Example
     {
-        public void Main()
-        {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
 
-            byte[] bytes = File.ReadAllBytes("../../resources/normal.jpg");
+        public NormalBase64Example(string apiKey)
+        {
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
+
+            byte[] bytes = File.ReadAllBytes("resources/normal.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
 
             Normal captcha = new Normal();

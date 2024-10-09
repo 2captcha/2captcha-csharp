@@ -6,13 +6,13 @@ namespace TwoCaptcha.Examples
 {
     public class HCaptchaOptionsExample
     {
-        public void Main()
+        public HCaptchaOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             HCaptcha captcha = new HCaptcha();
-            captcha.SetSiteKey("10000000-ffff-ffff-ffff-000000000001");
-            captcha.SetUrl("https://www.site.com/page/");
+            captcha.SetSiteKey("c0421d06-b92e-47fc-ab9a-5caa43c04538");
+            captcha.SetUrl("https://2captcha.com/demo/hcaptcha");
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 
             try

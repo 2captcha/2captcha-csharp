@@ -7,11 +7,11 @@ namespace TwoCaptcha.Examples
 {
     public class CanvasBase64Example
     {
-        public void Main()
+        public CanvasBase64Example(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            byte[] bytes = File.ReadAllBytes("../../resources/canvas.jpg");
+            byte[] bytes = File.ReadAllBytes("resources/canvas.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
 
             Canvas captcha = new Canvas();

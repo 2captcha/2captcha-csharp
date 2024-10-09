@@ -7,16 +7,16 @@ namespace TwoCaptcha.Examples
 {
     public class CanvasOptionsExample
     {
-        public void Main()
+        public CanvasOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Canvas captcha = new Canvas();
-            captcha.SetFile("../../resources/canvas.jpg");
+            captcha.SetFile("resources/canvas.jpg");
             captcha.SetPreviousId(0);
             captcha.SetCanSkip(false);
             captcha.SetLang("en");
-            captcha.SetHintImg(new FileInfo("../../resources/canvas_hint.jpg"));
+            captcha.SetHintImg(new FileInfo("resources/canvas_hint.jpg"));
             captcha.SetHintText("Draw around apple");
 
             try

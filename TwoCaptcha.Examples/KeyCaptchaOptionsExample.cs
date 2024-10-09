@@ -6,16 +6,16 @@ namespace TwoCaptcha.Examples
 {
     public class KeyCaptchaOptionsExample
     {
-        public void Main()
+        public KeyCaptchaOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             KeyCaptcha captcha = new KeyCaptcha();
-            captcha.SetUserId(10);
-            captcha.SetSessionId("493e52c37c10c2bcdf4a00cbc9ccd1e8");
-            captcha.SetWebServerSign("9006dc725760858e4c0715b835472f22");
-            captcha.SetWebServerSign2("2ca3abe86d90c6142d5571db98af6714");
-            captcha.SetUrl("https://www.keycaptcha.ru/demo-magnetic/");
+            captcha.SetUserId(184015);
+            captcha.SetSessionId("9ff29e0176e78eb7ba59314f92dbac1b");
+            captcha.SetWebServerSign("964635241a3e5e76980f2572e5f63452");
+            captcha.SetWebServerSign2("3ca802a38ffc5831fa293ac2819b1204");
+            captcha.SetUrl("https://2captcha.com/demo/keycaptcha");
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 
             try

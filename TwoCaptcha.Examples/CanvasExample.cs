@@ -6,12 +6,12 @@ namespace TwoCaptcha.Examples
 {
     public class CanvasExample
     {
-        public void Main()
+        public CanvasExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Canvas captcha = new Canvas();
-            captcha.SetFile("../../resources/canvas.jpg");
+            captcha.SetFile("resources/canvas.jpg");
             captcha.SetHintText("Draw around apple");
 
             try
