@@ -317,7 +317,7 @@ captcha.SetHintText("Draw around apple");
 
 <sup>[API method description.](https://2captcha.com/2captcha-api#coordinates)</sup>
 
-ClickCaptcha method returns coordinates of points on captcha image. Can be used if you need to click on particular points on the image.
+ClickCaptcha (Coordinates) method returns coordinates of points on captcha image. Can be used if you need to click on particular points on the image.
 
 ```csharp
 Coordinates captcha = new Coordinates();
