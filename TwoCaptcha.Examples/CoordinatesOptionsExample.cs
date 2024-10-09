@@ -7,14 +7,14 @@ namespace TwoCaptcha.Examples
 {
     public class CoordinatesOptionsExample
     {
-        public void Main()
+        public CoordinatesOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Coordinates captcha = new Coordinates();
-            captcha.SetFile("src/main/resources/grid_2.jpg");
+            captcha.SetFile("resources/grid_2.jpg");
             captcha.SetLang("en");
-            captcha.SetHintImg(new FileInfo("../../resources/grid_hint.jpg"));
+            captcha.SetHintImg(new FileInfo("resources/grid_hint.jpg"));
             captcha.SetHintText("Select all images with an Orange");
 
             try

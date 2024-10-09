@@ -7,18 +7,18 @@ namespace TwoCaptcha.Examples
 {
     public class GridOptionsExample
     {
-        public void Main()
+        public GridOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Grid captcha = new Grid();
-            captcha.SetFile("../../resources/grid_2.jpg");
+            captcha.SetFile("resources/grid_2.jpg");
             captcha.SetRows(3);
             captcha.SetCols(3);
             captcha.SetPreviousId(0);
             captcha.SetCanSkip(false);
             captcha.SetLang("en");
-            captcha.SetHintImg(new FileInfo("../../resources/grid_hint.jpg"));
+            captcha.SetHintImg(new FileInfo("resources/grid_hint.jpg"));
             captcha.SetHintText("Select all images with an Orange");
 
             try

@@ -7,11 +7,11 @@ namespace TwoCaptcha.Examples
 {
     public class RotateOptionsExample
     {
-        public void Main()
+        public RotateOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            byte[] bytes = File.ReadAllBytes("../../resources/rotate.jpg");
+            byte[] bytes = File.ReadAllBytes("resources/rotate.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
 
 
@@ -19,7 +19,7 @@ namespace TwoCaptcha.Examples
             captcha.SetBase64(base64EncodedImage);
             captcha.SetAngle(40);
             captcha.SetLang("en");
-            captcha.SetHintImg(new FileInfo("../../resources/rotate.jpg"));
+            captcha.SetHintImg(new FileInfo("resources/rotate_hint.jpg"));
             captcha.SetHintText("Put the images in the correct way up");
 
             try

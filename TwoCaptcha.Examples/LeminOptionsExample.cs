@@ -6,14 +6,14 @@ namespace TwoCaptcha.Examples
 {
     public class LeminOptionsExample
     {
-        public void Main()
+        public LeminOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Lemin captcha = new Lemin();
-            captcha.SetCaptchaId("CROPPED_d3d4d56_73ca4008925b4f83a8bed59c2dd0df6d");
+            captcha.SetCaptchaId("CROPPED_3dfdd5c_d1872b526b794d83ba3b365eb15a200b");
             captcha.SetApiServer("api.leminnow.com");
-            captcha.SetUrl("http://sat2.aksigorta.com.tr");
+            captcha.SetUrl("https://2captcha.com/demo/lemin");
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 
             try

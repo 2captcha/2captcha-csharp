@@ -7,11 +7,11 @@ namespace TwoCaptcha.Examples
 {
     public class CoordinatesBase64Example
     {
-        public void Main()
+        public CoordinatesBase64Example(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
-            byte[] bytes = File.ReadAllBytes("../../resources/grid.jpg");
+            byte[] bytes = File.ReadAllBytes("resources/grid.jpg");
             string base64EncodedImage = Convert.ToBase64String(bytes);
 
             Coordinates captcha = new Coordinates();

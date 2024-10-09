@@ -6,9 +6,9 @@ namespace TwoCaptcha.Examples
 {
     public class YandexOptionsExample
     {
-        public void Main()
+        public YandexOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Yandex captcha = new Yandex();
             captcha.SetSiteKey("Y5Lh0tiycconMJGsFd3EbbuNKSp1yaZESUOIHfeV");

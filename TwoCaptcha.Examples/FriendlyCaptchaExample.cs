@@ -6,9 +6,9 @@ namespace TwoCaptcha.Examples
 {
     public class FriendlyCaptchaExample
     {
-        public void Main()
+        public FriendlyCaptchaExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             FriendlyCaptcha captcha = new FriendlyCaptcha();
             captcha.SetSiteKey("2FZFEVS1FZCGQ9");

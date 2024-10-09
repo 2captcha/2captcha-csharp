@@ -6,9 +6,9 @@ namespace TwoCaptcha.Examples
 {
     public class TextOptionsExample
     {
-        public void Main()
+        public TextOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Text captcha = new Text();
             captcha.SetText("If tomorrow is Saturday, what day is today?");

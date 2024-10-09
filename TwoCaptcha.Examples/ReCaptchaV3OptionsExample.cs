@@ -6,16 +6,16 @@ namespace TwoCaptcha.Examples
 {
     public class ReCaptchaV3OptionsExample
     {
-        public void Main()
+        public ReCaptchaV3OptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             ReCaptcha captcha = new ReCaptcha();
-            captcha.SetSiteKey("6Le-wvkSVVABCPBMRTvw0Q4Muexq1bi0DJwx_mJ-");
-            captcha.SetUrl("https://mysite.com/page/with/recaptcha");
+            captcha.SetSiteKey("6LfB5_IbAAAAAMCtsjEHEHKqcB9iQocwwxTiihJu");
+            captcha.SetUrl("https://2captcha.com/demo/recaptcha-v3");
             captcha.SetVersion("v3");
             captcha.SetDomain("google.com");
-            captcha.SetAction("verify");
+            captcha.SetAction("demo_action");
             captcha.SetScore(0.3);
             captcha.SetEnterprise(false);
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");

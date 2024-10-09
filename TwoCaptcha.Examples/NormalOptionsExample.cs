@@ -7,12 +7,12 @@ namespace TwoCaptcha.Examples
 {
     public class NormalOptionsExample
     {
-        public void Main()
+        public NormalOptionsExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha("YOUR_API_KEY");
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Normal captcha = new Normal();
-            captcha.SetFile("../../resources/normal_2.jpg");
+            captcha.SetFile("resources/normal_2.jpg");
             captcha.SetNumeric(4);
             captcha.SetMinLen(4);
             captcha.SetMaxLen(20);
@@ -20,8 +20,8 @@ namespace TwoCaptcha.Examples
             captcha.SetCaseSensitive(true);
             captcha.SetCalc(false);
             captcha.SetLang("en");
-            captcha.SetHintImg(new FileInfo("../../resources/normal_hint.jpg"));
-            captcha.SetHintText("Type red symbols only");
+            captcha.SetHintImg(new FileInfo("resources/normal_hint.jpg"));
+            captcha.SetHintText("Type text");
 
             try
             {
