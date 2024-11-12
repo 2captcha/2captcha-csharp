@@ -51,6 +51,11 @@ namespace TwoCaptcha
         private bool lastCaptchaHasCallback;
 
         /**
+         * JSON format response
+         */ 
+        public int ExtendedResponse { get; set; } = 0;
+
+        /**
          * Network client
          */
         private ApiClient apiClient;
