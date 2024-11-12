@@ -78,6 +78,12 @@ namespace TwoCaptcha
             ApiKey = apiKey;
         }
 
+        public TwoCaptcha(string apiKey, int extendedResponse) : this()
+        {
+            ApiKey = apiKey;
+            ExtendedResponse = extendedResponse;
+        }
+
         /**
          * @param apiClient
          */
@@ -213,6 +219,7 @@ namespace TwoCaptcha
             var parameters = new Dictionary<string, string>();
             parameters["action"] = "get";
             parameters["id"] = id;
+            parameters["json"] = ExtendedResponse.ToString();
 
             string response = await Res(parameters);
 
@@ -300,6 +307,7 @@ namespace TwoCaptcha
         private void SendAttachDefaultParameters(Dictionary<string, string> parameters)
         {
             parameters["key"] = ApiKey;
+            parameters["json"] = ExtendedResponse.ToString();
 
             if (Callback != null)
             {
