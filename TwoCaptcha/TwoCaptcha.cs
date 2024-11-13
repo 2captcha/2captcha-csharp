@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 using TwoCaptcha.Captcha;
 using TwoCaptcha.Exceptions;
 using TimeoutException = TwoCaptcha.Exceptions.TimeoutException;
+using System.Xml.Linq;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Reflection;
 
 namespace TwoCaptcha
 {
@@ -52,7 +56,7 @@ namespace TwoCaptcha
 
         /**
          * JSON format response
-         */ 
+         */
         public int ExtendedResponse { get; set; } = 0;
 
         /**
@@ -181,6 +185,45 @@ namespace TwoCaptcha
             return Convert.ToInt64((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
         }
 
+        private string getCaptchaId(string response)/* throws ApiException*/
+        {
+            try
+            {
+                //string source = "{\r\n   \"id\": \"100000280905615\", \r\n \"name\": \"Jerard Jones\",  \r\n   \"first_name\": \"Jerard\", \r\n   \"last_name\": \"Jones\", \r\n   \"link\": \"https://www.facebook.com/Jerard.Jones\", \r\n   \"username\": \"Jerard.Jones\", \r\n   \"gender\": \"female\", \r\n   \"locale\": \"en_US\"\r\n}";
+                dynamic jsonObject = JObject.Parse(response);
+                //Console.WriteLine(data.id);
+
+                //JSONObject jsonObject = new JSONObject(response);
+                string requestVal = jsonObject.request;
+
+                if (requestVal.Equals("CAPCHA_NOT_READY"))
+                {
+                    return null;
+                }
+
+                return requestVal;
+
+            }
+            catch (JsonException)
+            {
+
+                if (response.Equals("CAPCHA_NOT_READY"))
+                {
+                    return null;
+                }
+                
+                string responseStatus = response.Substring(0, 3);
+
+                if (!responseStatus.Equals("OK|"))
+                {
+                    throw new ApiException("Cannot recognise api response (" + response + ")");
+                }
+
+                return response.Substring(3);
+            }
+        }
+
+
         /**
          * Sends captcha to '/in.php', and returns its `id`
          *
@@ -199,12 +242,15 @@ namespace TwoCaptcha
 
             string response = await apiClient.In(parameters, files);
 
+            return getCaptchaId(response);
+            /*
             if (!response.StartsWith("OK|"))
             {
                 throw new ApiException("Cannot recognise api response (" + response + ")");
             }
 
             return response.Substring(3);
+            */
         }
 
         /**
