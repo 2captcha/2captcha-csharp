@@ -26,6 +26,7 @@ namespace TwoCaptcha.Tests
             string apiKey = "API_KEY";
             string captchaId = "123";
             string code = "2763";
+            string json = "0";
 
             parameters["key"] = apiKey;
 
@@ -33,7 +34,7 @@ namespace TwoCaptcha.Tests
             resParameters["action"] = "get";
             resParameters["id"] = captchaId;
             resParameters["key"] = apiKey;
-
+            resParameters["json"] = json;
 
             var apiClientMock = new Mock<ApiClient>();
             apiClientMock

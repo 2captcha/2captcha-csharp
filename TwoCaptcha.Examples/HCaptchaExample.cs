@@ -9,6 +9,7 @@ namespace TwoCaptcha.Examples
         public HCaptchaExample(string apiKey)
         {
             TwoCaptcha solver = new TwoCaptcha(apiKey);
+            solver.ExtendedResponse = 1;
 
             HCaptcha captcha = new HCaptcha();
             captcha.SetSiteKey("c0421d06-b92e-47fc-ab9a-5caa43c04538");

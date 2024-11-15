@@ -72,17 +72,19 @@ solver.Callback = "https://your.site/result-receiver";
 solver.DefaultTimeout = 120;
 solver.RecaptchaTimeout = 600;
 solver.PollingInterval = 10;
+solver.ExtendedResponse = 1;
 ```
 
 ### TwoCaptcha instance options
 
 | Option           | Default value | Description                                                                                                                                        |
 | ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| softId           | 4582             | your software ID obtained after publishing in [2captcha sofware catalog]                                                                           |
+| softId           | 4582          | your software ID obtained after publishing in [2captcha sofware catalog]                                                                           |
 | callback         | -             | URL of your web-sever that receives the captcha recognition result. The URl should be first registered in [pingback settings] of your account      |
 | defaultTimeout   | 120           | Polling timeout in seconds for all captcha types except reCAPTCHA. Defines how long the module tries to get the answer from `res.php` API endpoint |
 | recaptchaTimeout | 600           | Polling timeout for reCAPTCHA in seconds. Defines how long the module tries to get the answer from `res.php` API endpoint                          |
 | pollingInterval  | 10            | Interval in seconds between requests to `res.php` API endpoint, setting values less than 5 seconds is not recommended                              |
+| json             | 0             | Json or String format response from `res.php` API endpoint, extendedResponse = 1 returns JSON format response                                      |
 
 >  **IMPORTANT:** once `Callback` is defined for `TwoCaptcha` instance, all methods return only the captcha ID and DO NOT poll the API to get the result. The result will be sent to the callback URL.
 To get the answer manually use [getResult method](#send--getresult)
@@ -240,7 +242,8 @@ captcha.SetUrl("https://mysite.com/captcha.html");
 
 <sup>[API method description.](https://2captcha.com/2captcha-api#solving_hcaptcha)</sup>
 
-Use this method to solve hCaptcha challenge. Returns a token to bypass captcha.
+Use this method to solve hCaptcha challenge. Returns a token to bypass captcha. 
+Use 'ExtendedResponse' to get respKey and useragent in captcha answer.
 
 ```csharp
 HCaptcha captcha = new HCaptcha();
