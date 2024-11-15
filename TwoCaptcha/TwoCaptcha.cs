@@ -1,16 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Globalization;
-using System.Threading;
+using System.IO;
 using System.Threading.Tasks;
 using TwoCaptcha.Captcha;
 using TwoCaptcha.Exceptions;
 using TimeoutException = TwoCaptcha.Exceptions.TimeoutException;
-using System.Xml.Linq;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using System.Reflection;
 
 namespace TwoCaptcha
 {
@@ -274,14 +271,6 @@ namespace TwoCaptcha
             string response = await apiClient.In(parameters, files);
 
             return getCaptchaId(response);
-            /*
-            if (!response.StartsWith("OK|"))
-            {
-                throw new ApiException("Cannot recognise api response (" + response + ")");
-            }
-
-            return response.Substring(3);
-            */
         }
 
         /**
@@ -301,18 +290,6 @@ namespace TwoCaptcha
             string responseStr = await Res(parameters);
 
             return handleResponse(responseStr);
-
-            /*if (response.Equals("CAPCHA_NOT_READY"))
-            {
-                return null;
-            }
-
-            if (!response.StartsWith("OK|"))
-            {
-                throw new ApiException("Cannot recognise api response (" + response + ")");
-            }
-
-            return response.Substring(3);*/
         }
         
         /**
