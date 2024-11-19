@@ -22,6 +22,7 @@ namespace TwoCaptcha.Tests
             parameters["api_server"] = "api.leminnow.com";
             parameters["pageurl"] = "http://sat2.aksigorta.com.tr";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

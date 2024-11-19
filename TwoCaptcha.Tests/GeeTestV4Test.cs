@@ -22,6 +22,7 @@ namespace TwoCaptcha.Tests
             parameters["challenge"] = "12345678abc90123d45678ef90123a456b";
             parameters["pageurl"] = "https://mysite.com/captcha.html";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

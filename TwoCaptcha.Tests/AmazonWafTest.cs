@@ -24,6 +24,7 @@ namespace TwoCaptcha.Tests
             parameters["context"] = "test_iv";
             parameters["iv"] = "test_context";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
