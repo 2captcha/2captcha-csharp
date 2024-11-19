@@ -25,7 +25,6 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [FunCaptcha](#funcaptcha)
     - [GeeTest](#geetest)
     - [GeeTest v4](#geetest-v4)
-    - [hCaptcha](#hcaptcha)
     - [KeyCaptcha](#keycaptcha)
     - [Capy](#capy)
     - [Grid](#grid)
@@ -234,20 +233,6 @@ GeeTestV4 captcha = new GeeTestV4();
 captcha.SetCaptchaId("72bf15796d0b69c43867452fea615052");
 captcha.SetChallenge("12345678abc90123d45678ef90123a456b");
 captcha.SetUrl("https://mysite.com/captcha.html");
-```
-
-### hCaptcha
-
-<sup>[API method description.](https://2captcha.com/2captcha-api#solving_hcaptcha)</sup>
-
-Use this method to solve hCaptcha challenge. Returns a token to bypass captcha.
-
-```csharp
-HCaptcha captcha = new HCaptcha();
-captcha.SetSiteKey("10000000-ffff-ffff-ffff-000000000001");
-captcha.SetUrl("https://www.site.com/page/");
-captcha.SetData("foo");
-captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ### KeyCaptcha
@@ -537,7 +522,7 @@ await solver.Report(captcha.Id, false); // captcha solved incorrectly
 ```
 ## Proxies
 
-You can pass your proxy as an additional argument for methods: recaptcha, funcaptcha, geetest, geetest v4, hcaptcha, keycaptcha, capy puzzle, lemin, cloudflare turnstile, amazon waf, friendly captcha, mtcaptcha, cutcaptcha, cybersiara, datadome, atbcaptcha, tencent and etc. The proxy will be forwarded to the API to solve the captcha.
+You can pass your proxy as an additional argument for methods: recaptcha, funcaptcha, geetest, geetest v4, keycaptcha, capy puzzle, lemin, cloudflare turnstile, amazon waf, friendly captcha, mtcaptcha, cutcaptcha, cybersiara, datadome, atbcaptcha, tencent and etc. The proxy will be forwarded to the API to solve the captcha.
 
 We have our own proxies that we can offer you. [Buy residential proxies] for avoid restrictions and blocks. [Quick start].
 
