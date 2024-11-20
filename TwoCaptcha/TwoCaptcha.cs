@@ -221,16 +221,25 @@ namespace TwoCaptcha
         {
             try
             {
-                dynamic jsonObject = JObject.Parse(response);
+                //test----------
+                /*
+                string responseBody = await response.Content.ReadAsStringAsync();
+                JObject jObject = JObject.Parse(responseBody);
+                JArray jArray = JArray.Parse(responseBody);
+                */
+                //---------------
 
-                string requestVal = jsonObject.request;
+                JObject jsonObject = JObject.Parse(response);
+
+                string requestVal = jsonObject["request"].ToString();
 
                 if (requestVal.Equals("CAPCHA_NOT_READY"))
                 {
                     return null;
                 }
-
-                return JsonConvert.ToString(jsonObject);
+                //Todo: ERROR_CAPTCHA_UNSOLVABLE
+                //return JsonConvert.ToString(jsonObject);
+                return response;
 
             }
             catch (JsonException)
