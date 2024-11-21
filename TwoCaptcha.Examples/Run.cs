@@ -131,14 +131,6 @@ public class Run
                 GridOptionsExample GridOptionsExample = new GridOptionsExample(apiKey);
                 break;
 
-            case "HCaptchaExample":
-                HCaptchaExample HCaptchaExample = new HCaptchaExample(apiKey);
-                break;
-
-            case "HCaptchaOptionsExample":
-                HCaptchaOptionsExample HCaptchaOptionsExample = new HCaptchaOptionsExample(apiKey);
-                break;
-
             case "KeyCaptchaExample":
                 KeyCaptchaExample KeyCaptchaExample = new KeyCaptchaExample(apiKey);
                 break;
