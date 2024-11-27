@@ -8,7 +8,7 @@ namespace TwoCaptcha.Examples
     {
         public TextExample(string apiKey)
         {
-            TwoCaptcha solver = new TwoCaptcha(apiKey, 1);
+            TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             Text captcha = new Text("If tomorrow is Saturday, what day is today?");
 
