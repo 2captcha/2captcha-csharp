@@ -93,7 +93,7 @@ When you submit any image-based captcha use can provide additional options to he
 | Option        | Default Value | Description                                                                                        |
 | ------------- | ------------- | -------------------------------------------------------------------------------------------------- |
 | numeric       | 0             | Defines if captcha contains numeric or other symbols [see more info in the API docs][post options] |
-| minLength     | 0             | minimal answer lenght                                                                              |
+| minLength     | 0             | minimal answer length                                                                              |
 | maxLength     | 0             | maximum answer length                                                                              |
 | phrase        | 0             | defines if the answer contains multiple words or not                                               |
 | caseSensitive | 0             | defines if the answer is case sensitive                                                            |
