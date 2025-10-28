@@ -43,6 +43,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [DataDome](#datadome)
     - [atbCAPTCHA](#atbcaptcha)
     - [Tencent](#tencent)
+    - [VK Image](#vk-image)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -486,6 +487,27 @@ Use this method to solve Tencent captcha. Returns a token to bypass the captcha.
 Tencent tencent = new Tencent();
 tencent.SetAppId("190014885");
 tencent.SetPageUrl("https://www.example.com/");
+```
+
+### VK Image
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#vkcaptcha)</sup>
+
+We offer two methods to solve this type of captcha - token-based and image-based.
+
+We use the body (image in base64 format) or file (image as file) and steps parameters.
+You can get both values from the response to the request https://api.vk.com/method/captchaNotRobot.getContent?v={API_VER} when loading the captcha widget on the page.
+
+```csharp
+TwoCaptcha solver = new TwoCaptcha(apiKey);
+
+byte[] bytes = File.ReadAllBytes("resources/vk.jpg");
+string base64EncodedImage = Convert.ToBase64String(bytes);
+
+VkImage captcha = new VkImage();
+captcha.SetBase64(base64EncodedImage);
+captcha.SetSteps("[5,12,22,24,21,23,10,7,2,8,19,18,8,24,21,22,11,14,16,5,18,20,4,21,12,6,0,0,11,12,8,20,19,3,14,8,9,13,16,24,18,3,2,23,8,12,6,1,11,0,20,15,19,22,17,24,8,0,12,5,19,14,11,6,7,14,23,24,23,20,4,20,6,12,4,17,4,18,6,20,17,5,23,7,10,2,8,9,5,4,17,24,11,14,4,10,12,22,21,2]");
+
 ```
 
 
