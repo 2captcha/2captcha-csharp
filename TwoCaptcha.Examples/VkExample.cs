@@ -10,11 +10,11 @@ namespace TwoCaptcha.Examples
     {
         public VkExample(string apiKey)
         {
-            VkImageExample(apiKey);
+            ImageBased(apiKey);
             //VkCaptchaExample(apiKey);
         }
 
-        private void VkImageExample(string apiKey)
+        private void ImageBased(string apiKey)
         {
             TwoCaptcha solver = new TwoCaptcha(apiKey);
 
@@ -37,7 +37,7 @@ namespace TwoCaptcha.Examples
         }
 
         /*
-        private void VkCaptchaExample(string apiKey)
+        private void TokenBased(string apiKey)
         {
             TwoCaptcha solver = new TwoCaptcha(apiKey);
 
