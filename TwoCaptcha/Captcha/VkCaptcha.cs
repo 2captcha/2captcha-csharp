@@ -5,11 +5,11 @@ using System.IO;
 
 namespace TwoCaptcha.Captcha
 {
-    public class VkImage : Captcha
+    public class VkCaptcha : Captcha
     {
-        public VkImage() : base()
+        public VkCaptcha(String method) : base()
         {
-            parameters["method"] = "vkimage";
+            parameters["method"] = method;
         }
 
         public void SetSteps(String steps)

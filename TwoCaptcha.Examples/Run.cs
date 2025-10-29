@@ -199,8 +199,8 @@ public class Run
                 YandexOptionsExample YandexOptionsExample = new YandexOptionsExample(apiKey);
                 break;
 
-            case "VkImageExample":
-                VkImageExample VkImageExample = new VkImageExample(apiKey);
+            case "VkExample":
+                VkExample VkExample = new VkExample(apiKey);
                 break;
         }
     }
