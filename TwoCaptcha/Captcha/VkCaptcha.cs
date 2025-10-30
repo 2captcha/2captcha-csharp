@@ -31,6 +31,16 @@ namespace TwoCaptcha.Captcha
         {
             parameters["userAgent"] = userAgent;
         }
+
+        public void SetFile(string filePath)
+        {
+            SetFile(new FileInfo(filePath));
+        }
+
+        public void SetFile(FileInfo file)
+        {
+            files["file"] = file;
+        }
     }
 }
 
