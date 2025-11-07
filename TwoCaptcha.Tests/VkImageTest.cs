@@ -9,7 +9,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace TwoCaptcha.Tests
 {
     [TestFixture]
-    public class VkTest : AbstractWrapperTestCase
+    public class VkImageTest : AbstractWrapperTestCase
     {
         [Test]
         public async Task TestAllParameters()
