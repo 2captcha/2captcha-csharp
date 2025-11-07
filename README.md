@@ -518,7 +518,6 @@ captcha.SetSteps("[5,12,22,24,21,23,10,7,2,8,19,18,8,24,21,22,11,14,16,5,18,20,4
 Token-based method requires redirect_uri parameter, as well as proxy and userAgent. The value of the redirect_uri parameter can be found in the response to requests to the VK API that return captchas.
 
 ```csharp
-
 VkCaptcha captcha = new VkCaptcha("vkcaptcha");
 
 captcha.SetRedirectUri("https://id.vk.com/not_robot_captcha?domain=vk.com&session_token=eyJ....HGsc5B4LyvjA&variant=popup&blank=1");
