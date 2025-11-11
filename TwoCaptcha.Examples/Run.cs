@@ -198,6 +198,10 @@ public class Run
             case "YandexOptionsExample":
                 YandexOptionsExample YandexOptionsExample = new YandexOptionsExample(apiKey);
                 break;
+
+            case "ProsopoExample":
+                ProsopoExample ProsopoExample = new ProsopoExample(apiKey);
+                break;
         }
     }
 }

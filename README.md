@@ -43,6 +43,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [DataDome](#datadome)
     - [atbCAPTCHA](#atbcaptcha)
     - [Tencent](#tencent)
+    - [Prosopo](#prosopo)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -488,6 +489,19 @@ tencent.SetAppId("190014885");
 tencent.SetPageUrl("https://www.example.com/");
 ```
 
+### Prosopo
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#prosopo)</sup>
+
+Use this method to solve Prosopo and obtain a token to bypass the protection.
+
+
+```csharp
+Prosopo captcha = new Prosopo();
+
+captcha.SetSiteKey("5EZVvsHMrKCFKp5NYNoTyDjTjetoVo1Z4UNNbTwJf1GfN6Xm");
+captcha.SetUrl("https://www.twickets.live/");
+```
 
 ## Other methods
 
