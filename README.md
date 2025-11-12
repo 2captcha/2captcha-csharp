@@ -491,7 +491,7 @@ tencent.SetPageUrl("https://www.example.com/");
 
 ### Prosopo
 
-<sup>[API method description.](https://2captcha.com/2captcha-api#prosopo)</sup>
+<sup>[API method description.](https://2captcha.com/2captcha-api#prosopo-procaptcha)</sup>
 
 Use this method to solve Prosopo and obtain a token to bypass the protection.
 
