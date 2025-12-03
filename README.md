@@ -44,6 +44,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [atbCAPTCHA](#atbcaptcha)
     - [Tencent](#tencent)
     - [Prosopo](#prosopo)
+    - [Captchafox](#captchafox)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -501,6 +502,21 @@ Prosopo captcha = new Prosopo();
 
 captcha.SetSiteKey("5EZVvsHMrKCFKp5NYNoTyDjTjetoVo1Z4UNNbTwJf1GfN6Xm");
 captcha.SetUrl("https://www.twickets.live/");
+```
+
+### Captchafox
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#captchafox)</sup>
+
+Use this method to solve Captchafox and obtain a token to bypass the protection.
+
+
+```csharp
+Captchafox captcha = new Captchafox();
+captcha.SetSiteKey("sk_ILKWNruBBVKDOM7dZs59KHnDLEWiH");
+captcha.SetUrl("https://mysite.com/page/with/captchafox");
+captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36");
+captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 ## Other methods

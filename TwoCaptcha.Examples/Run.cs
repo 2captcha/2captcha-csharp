@@ -202,6 +202,10 @@ public class Run
             case "ProsopoExample":
                 ProsopoExample ProsopoExample = new ProsopoExample(apiKey);
                 break;
+
+            case "CaptchafoxExample":
+                CaptchafoxExample CaptchafoxExample = new CaptchafoxExample(apiKey);
+                break;
         }
     }
 }
