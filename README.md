@@ -45,6 +45,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Tencent](#tencent)
     - [Prosopo](#prosopo)
     - [Captchafox](#captchafox)
+    - [Temu](#temu)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -518,6 +519,21 @@ captcha.SetUrl("https://mysite.com/page/with/captchafox");
 captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
+
+### Temu
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#temucaptcha)</sup>
+
+This method can be used to solve Temu. Returns a coordinates.
+
+```csharp
+Temu captcha = new Temu();
+captcha.SetBody(bodyStr);
+captcha.SetPart1(part1Str);
+captcha.SetPart2(part2Str);
+captcha.SetPart3(part3Str);
+```
+
 
 ## Other methods
 

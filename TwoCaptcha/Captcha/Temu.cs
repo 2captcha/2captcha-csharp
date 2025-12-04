@@ -7,6 +7,7 @@ namespace TwoCaptcha.Captcha
     {
         public Temu() : base()
         {
+            parameters["method"] = "temuimage";
         }
 
         public void SetBody(String body)
