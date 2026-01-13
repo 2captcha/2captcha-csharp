@@ -21,6 +21,7 @@ namespace TwoCaptcha.Tests
             parameters["pageurl"] = "https://demo.mycybersiara.com/";
             parameters["userAgent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(cyberSiARA, parameters);
         }

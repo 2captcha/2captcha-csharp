@@ -26,14 +26,15 @@ namespace TwoCaptcha.Tests
             string apiKey = "API_KEY";
             string captchaId = "123";
             string code = "2763";
+            string json = "0";
 
             parameters["key"] = apiKey;
 
             var resParameters = new Dictionary<string, string>();
             resParameters["action"] = "get";
             resParameters["id"] = captchaId;
+            resParameters["json"] = json;
             resParameters["key"] = apiKey;
-
 
             var apiClientMock = new Mock<ApiClient>();
             apiClientMock
@@ -48,7 +49,7 @@ namespace TwoCaptcha.Tests
             solver.SetApiClient(apiClientMock.Object);
 
             await solver.Solve(captcha);
-
+            
             apiClientMock.Verify(ac => ac.In(
                 It.Is<Dictionary<string, string>>(actual => ParametersAreSame(parameters, actual)),
                 It.Is<Dictionary<string, FileInfo>>(actual => FilesAreSame(files, actual))
@@ -56,6 +57,7 @@ namespace TwoCaptcha.Tests
 
             Assert.AreEqual(captchaId, captcha.Id);
             Assert.AreEqual(code, captcha.Code);
+            
         }
 
         private bool ParametersAreSame(Dictionary<string, string> expected, Dictionary<string, string> actual)
