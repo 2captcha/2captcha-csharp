@@ -26,6 +26,7 @@ namespace TwoCaptcha.Tests
             parameters["userAgent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36";
             parameters["data[anyKey]"] = "anyStringValue";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

@@ -28,6 +28,7 @@ namespace TwoCaptcha.Tests
             parameters["proxytype"] = "http";
             parameters["userAgent"] = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.3"; 
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(dataDome, parameters);
         }

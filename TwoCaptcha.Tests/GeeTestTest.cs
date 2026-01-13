@@ -24,6 +24,7 @@ namespace TwoCaptcha.Tests
             parameters["challenge"] = "69A21A01-CC7B-B9C6-0F9A-E7FA06677FFC";
             parameters["pageurl"] = "https://launches.endclothing.com/distil_r_captcha.html";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

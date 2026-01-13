@@ -19,6 +19,7 @@ namespace TwoCaptcha.Tests
             parameters["method"] = "post";
             parameters["textcaptcha"] = question;
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -33,6 +34,7 @@ namespace TwoCaptcha.Tests
             parameters["method"] = "post";
             parameters["textcaptcha"] = question;
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
@@ -49,6 +51,7 @@ namespace TwoCaptcha.Tests
             parameters["textcaptcha"] = question;
             parameters["lang"] = "en";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

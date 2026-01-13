@@ -28,6 +28,7 @@ namespace TwoCaptcha.Tests
             parameters["lang"] = "en";
             parameters["body"] = base64EncodedImage;
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);

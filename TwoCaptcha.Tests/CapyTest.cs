@@ -22,7 +22,7 @@ namespace TwoCaptcha.Tests
             parameters["pageurl"] = "http://mysite.com/";
             parameters["api_server"] = "https://myapiserver.com/";
             parameters["soft_id"] = "4582";
-
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

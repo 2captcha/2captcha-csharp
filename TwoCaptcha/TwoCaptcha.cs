@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Globalization;
-using System.Threading;
+using System.IO;
 using System.Threading.Tasks;
 using TwoCaptcha.Captcha;
 using TwoCaptcha.Exceptions;
@@ -51,6 +52,11 @@ namespace TwoCaptcha
         private bool lastCaptchaHasCallback;
 
         /**
+         * JSON format response
+         */
+        public int ExtendedResponse { get; set; } = 0;
+
+        /**
          * Network client
          */
         private ApiClient apiClient;
@@ -71,6 +77,12 @@ namespace TwoCaptcha
         public TwoCaptcha(string apiKey) : this()
         {
             ApiKey = apiKey;
+        }
+
+        public TwoCaptcha(string apiKey, int extendedResponse) : this()
+        {
+            ApiKey = apiKey;
+            ExtendedResponse = extendedResponse;
         }
 
         /**
@@ -170,6 +182,73 @@ namespace TwoCaptcha
             return Convert.ToInt64((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds);
         }
 
+        private string getCaptchaId(string response)
+        {
+            try
+            {
+                dynamic jsonObject = JObject.Parse(response);
+                
+                string requestVal = jsonObject.request;
+
+                if (requestVal.Equals("CAPCHA_NOT_READY"))
+                {
+                    return null;
+                }
+
+                return requestVal;
+
+            }
+            catch (JsonException)
+            {
+
+                if (response.Equals("CAPCHA_NOT_READY"))
+                {
+                    return null;
+                }
+                
+                string responseStatus = response.Substring(0, 3);
+
+                if (!responseStatus.Equals("OK|"))
+                {
+                    throw new ApiException("Cannot recognise api response (" + response + ")");
+                }
+
+                return response.Substring(3);
+            }
+        }
+
+        private string handleResponse(string response)
+        {
+            try
+            {
+                dynamic jsonObject = JObject.Parse(response);
+
+                string requestVal = jsonObject.request;
+
+                if (requestVal.Equals("CAPCHA_NOT_READY"))
+                {
+                    return null;
+                }
+                return response;
+            }
+            catch (JsonException)
+            {
+                if (response.Equals("CAPCHA_NOT_READY"))
+                {
+                    return null;
+                }
+
+                string responseStatus = response.Substring(0, 3);
+
+                if (!responseStatus.Equals("OK|"))
+                {
+                    throw new ApiException("Cannot recognise api response (" + response + ")");
+                }
+
+                return response.Substring(3);
+            }
+        }
+
         /**
          * Sends captcha to '/in.php', and returns its `id`
          *
@@ -188,12 +267,7 @@ namespace TwoCaptcha
 
             string response = await apiClient.In(parameters, files);
 
-            if (!response.StartsWith("OK|"))
-            {
-                throw new ApiException("Cannot recognise api response (" + response + ")");
-            }
-
-            return response.Substring(3);
+            return getCaptchaId(response);
         }
 
         /**
@@ -208,22 +282,13 @@ namespace TwoCaptcha
             var parameters = new Dictionary<string, string>();
             parameters["action"] = "get";
             parameters["id"] = id;
+            parameters["json"] = ExtendedResponse.ToString();
 
-            string response = await Res(parameters);
+            string responseStr = await Res(parameters);
 
-            if (response.Equals("CAPCHA_NOT_READY"))
-            {
-                return null;
-            }
-
-            if (!response.StartsWith("OK|"))
-            {
-                throw new ApiException("Cannot recognise api response (" + response + ")");
-            }
-
-            return response.Substring(3);
+            return handleResponse(responseStr);
         }
-
+        
         /**
          * Gets account's balance
          *
@@ -295,6 +360,7 @@ namespace TwoCaptcha
         private void SendAttachDefaultParameters(Dictionary<string, string> parameters)
         {
             parameters["key"] = ApiKey;
+            parameters["json"] = ExtendedResponse.ToString();
 
             if (Callback != null)
             {

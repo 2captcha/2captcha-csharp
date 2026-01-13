@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["sitekey"] = "MTPublic-KzqLY1cKH";
             parameters["pageurl"] = "https://2captcha.com/demo/mtcaptcha";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(mtCaptcha, parameters);
         }

@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["sitekey"] = "Y5Lh0tiycconMJGsFd3EbbuNKSp1yaZESUOIHfeV";
             parameters["pageurl"] = "https://rutube.ru";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

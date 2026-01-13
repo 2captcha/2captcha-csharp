@@ -26,6 +26,7 @@ namespace TwoCaptcha.Tests
             parameters["pagedata"] = "bar";
             parameters["action"] = "baz";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

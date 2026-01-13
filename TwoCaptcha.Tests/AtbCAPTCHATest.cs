@@ -22,6 +22,7 @@ namespace TwoCaptcha.Tests
             parameters["api_server"] = "https://cap.aisecurius.com";
             parameters["pageurl"] = "https://www.example.com/";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(atbCAPTCHA, parameters);
         }

@@ -21,6 +21,7 @@ namespace TwoCaptcha.Tests
             parameters["pageurl"] = "https://example.cc/foo/bar.html";
             parameters["api_key"] = "SAb83IIB"; 
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(cutcaptcha, parameters);
         }

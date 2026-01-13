@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["sitekey"] = "2FZFEVS1FZCGQ9";
             parameters["pageurl"] = "https://www.site.com/page/";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

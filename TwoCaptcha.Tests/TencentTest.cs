@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["app_id"] = "190014885";
             parameters["pageurl"] = "https://www.example.com/";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(tencent, parameters);
         }
