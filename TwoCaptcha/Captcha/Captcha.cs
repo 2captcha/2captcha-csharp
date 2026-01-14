@@ -57,5 +57,15 @@ namespace TwoCaptcha.Captcha
         {
             return new Dictionary<string, FileInfo>(files);
         }
+
+        public void SetSiteKey(String siteKey)
+        {
+            parameters["sitekey"] = siteKey;
+        }
+
+        public void SetUrl(String url)
+        {
+            parameters["pageurl"] = url;
+        }
     }
 }

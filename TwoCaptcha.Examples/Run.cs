@@ -198,6 +198,14 @@ public class Run
             case "YandexOptionsExample":
                 YandexOptionsExample YandexOptionsExample = new YandexOptionsExample(apiKey);
                 break;
+
+            case "VkImageExample":
+                VkImageExample VkImageExample = new VkImageExample(apiKey);
+                break;
+
+            case "VkCaptchaExample":
+                VkCaptchaExample VkCaptchaExample = new VkCaptchaExample(apiKey);
+                break;
         }
     }
 }
