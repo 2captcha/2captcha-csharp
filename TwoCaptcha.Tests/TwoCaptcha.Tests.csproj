@@ -16,4 +16,19 @@
         <ProjectReference Include="..\TwoCaptcha\TwoCaptcha.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="resources\temu\body.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="resources\temu\part1.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="resources\temu\part2.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="resources\temu\part3.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
