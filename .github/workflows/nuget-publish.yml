@@ -1,0 +1,56 @@
+name: Publish to NuGet
+
+on:
+  push:
+    # Запускать только при пуше тегов версий,
+    # например 1.4.1 или v1.4.1
+    tags:
+      - 'v*'
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build-and-publish:
+    name: Build and publish to NuGet
+    runs-on: ubuntu-latest
+
+    env:
+      # Имя основного проекта библиотеки
+      PROJECT_PATH: TwoCaptcha/TwoCaptcha.csproj
+      # Версию берём из имени тега, например 1.4.1 или v1.4.1
+      TAG_NAME: ${{ github.ref_name }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Normalize version from tag
+        id: version
+        run: |
+          tag="${TAG_NAME}"
+          # Убираем префикс v, если используется формат v1.2.3
+          version="${tag#v}"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build $PROJECT_PATH -c Release --no-restore
+
+      - name: Pack
+        run: |
+          dotnet pack $PROJECT_PATH -c Release \
+            -o ./artifacts \
+            /p:PackageVersion=${{ steps.version.outputs.version }}
+
+      - name: Publish to NuGet
+        run: |
+          dotnet nuget push "artifacts/*.nupkg" \
+            --api-key "${{ secrets.NUGET_API_KEY }}" \
+            --source "https://api.nuget.org/v3/index.json" \
+            --skip-duplicate

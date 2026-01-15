@@ -62,5 +62,15 @@ namespace TwoCaptcha.Captcha
         {
             parameters["userAgent"] = userAgent;
         }
+      
+        public void SetSiteKey(String siteKey)
+        {
+            parameters["sitekey"] = siteKey;
+        }
+
+        public void SetUrl(String url)
+        {
+            parameters["pageurl"] = url;
+        }
     }
 }
