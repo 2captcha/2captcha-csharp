@@ -43,6 +43,9 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [DataDome](#datadome)
     - [atbCAPTCHA](#atbcaptcha)
     - [Tencent](#tencent)
+    - [Prosopo](#prosopo)
+    - [Captchafox](#captchafox)
+    - [Temu](#temu)
     - [VK Image](#vk-image)
     - [VK Captcha](#vk-captcha)
   - [Other methods](#other-methods)
@@ -490,6 +493,49 @@ tencent.SetAppId("190014885");
 tencent.SetPageUrl("https://www.example.com/");
 ```
 
+### Prosopo
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#prosopo-procaptcha)</sup>
+
+Use this method to solve Prosopo and obtain a token to bypass the protection.
+
+
+```csharp
+Prosopo captcha = new Prosopo();
+
+captcha.SetSiteKey("5EZVvsHMrKCFKp5NYNoTyDjTjetoVo1Z4UNNbTwJf1GfN6Xm");
+captcha.SetUrl("https://www.twickets.live/");
+```
+
+### Captchafox
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#captchafox)</sup>
+
+Use this method to solve Captchafox and obtain a token to bypass the protection.
+
+
+```csharp
+Captchafox captcha = new Captchafox();
+captcha.SetSiteKey("sk_ILKWNruBBVKDOM7dZs59KHnDLEWiH");
+captcha.SetUrl("https://mysite.com/page/with/captchafox");
+captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36");
+captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+```
+
+### Temu
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#temucaptcha)</sup>
+
+This method can be used to solve Temu. Returns a coordinates.
+
+```csharp
+Temu captcha = new Temu();
+captcha.SetBody(bodyStr);
+captcha.SetPart1(part1Str);
+captcha.SetPart2(part2Str);
+captcha.SetPart3(part3Str);
+```
+
 ### VK Image
 
 <sup>[API method description.](https://2captcha.com/2captcha-api#vkcaptcha)</sup>
@@ -508,7 +554,6 @@ string base64EncodedImage = Convert.ToBase64String(bytes);
 VkCaptcha captcha = new VkCaptcha("vkimage");
 captcha.SetBase64(base64EncodedImage);
 captcha.SetSteps("[5,12,22,24,21,23,10,7,2,8,19,18,8,24,21,22,11,14,16,5,18,20,4,21,12,6,0,0,11,12,8,20,19,3,14,8,9,13,16,24,18,3,2,23,8,12,6,1,11,0,20,15,19,22,17,24,8,0,12,5,19,14,11,6,7,14,23,24,23,20,4,20,6,12,4,17,4,18,6,20,17,5,23,7,10,2,8,9,5,4,17,24,11,14,4,10,12,22,21,2]");
-
 ```
 
 ### VK Captcha
