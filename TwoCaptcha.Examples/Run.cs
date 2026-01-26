@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.ConstrainedExecution;
 using TwoCaptcha.Examples;
 
@@ -209,6 +210,8 @@ public class Run
 
             case "TemuExample":
                 TemuExample TemuExample = new TemuExample(apiKey);
+                break;
+
             case "VkImageExample":
                 VkImageExample VkImageExample = new VkImageExample(apiKey);
                 break;
