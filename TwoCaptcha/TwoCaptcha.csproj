@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <PackageId>2captcha-csharp</PackageId>
-        <Version>1.4.0</Version>
+        <Version>1.4.2</Version>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Authors>2captcha</Authors>
         <Company>2captcha</Company>

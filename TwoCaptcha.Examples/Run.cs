@@ -198,6 +198,24 @@ public class Run
             case "YandexOptionsExample":
                 YandexOptionsExample YandexOptionsExample = new YandexOptionsExample(apiKey);
                 break;
+
+            case "ProsopoExample":
+                ProsopoExample ProsopoExample = new ProsopoExample(apiKey);
+                break;
+
+            case "CaptchafoxExample":
+                CaptchafoxExample CaptchafoxExample = new CaptchafoxExample(apiKey);
+                break;
+
+            case "TemuExample":
+                TemuExample TemuExample = new TemuExample(apiKey);
+            case "VkImageExample":
+                VkImageExample VkImageExample = new VkImageExample(apiKey);
+                break;
+
+            case "VkCaptchaExample":
+                VkCaptchaExample VkCaptchaExample = new VkCaptchaExample(apiKey);
+                break;
         }
     }
 }
