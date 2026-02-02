@@ -26,5 +26,20 @@ namespace TwoCaptcha.Captcha
         {
             parameters["iv"] = iv;
         }
+
+        public void SetChallengeScript(string challengeScript)
+        {
+            parameters["challenge_script"] = challengeScript;
+        }
+
+        public void SetCaptchaScript(string captchaScript)
+        {
+            parameters["captcha_script"] = captchaScript;
+        }
+
+        public void SetHeaderAcao(int headerAcao)
+        {
+            parameters["header_acao"] = headerAcao.ToString();
+        }
     }
 }
