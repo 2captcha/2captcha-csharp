@@ -15,6 +15,7 @@ namespace TwoCaptcha.Examples
             captcha.SetUrl("https://mysite.com/page/with/captchafox");
             captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36");
             captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+            captcha.SetApiServer("api_server");
 
             try
             {
