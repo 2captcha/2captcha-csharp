@@ -219,6 +219,10 @@ public class Run
             case "VkCaptchaExample":
                 VkCaptchaExample VkCaptchaExample = new VkCaptchaExample(apiKey);
                 break;
+
+            case "AltchacaptchaExample":
+                AltchacaptchaExample AltchacaptchaExample = new AltchacaptchaExample(apiKey);
+                break;
         }
     }
 }

@@ -47,7 +47,8 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Captchafox](#captchafox)
     - [Temu](#temu)
     - [VK Image](#vk-image)
-    - [VK Captcha](#vk-captcha)
+    - [VK Captcha](#vk-captcha)  
+    - [Altchacaptcha](#altchacaptcha)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -573,6 +574,17 @@ captcha.SetuserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.
 captcha.SetProxy("http", "1.2.3.4");
 ```
 
+### Altchacaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#altchacaptcha)</sup>
+
+Use this method to solve Altchacaptcha and obtain a token to bypass the protection.
+
+```csharp
+Altchacaptcha captcha = new Altchacaptcha();
+captcha.SetChallengeUrl("https://.../captcha/api/altcha/challenge");
+captcha.SetPageUrl("https://site.com/");
+```
 
 ## Other methods
 
