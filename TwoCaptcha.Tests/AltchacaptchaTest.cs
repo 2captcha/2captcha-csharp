@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["challenge_url"] = "https://.../captcha/api/altcha/challenge";
             parameters["pageurl"] = "https://site.com/";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
