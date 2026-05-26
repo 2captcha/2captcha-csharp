@@ -26,5 +26,10 @@ namespace TwoCaptcha.Captcha
         {
             parameters["api_server"] = apiServer;
         }
+
+        public void SetRiskType(string riskType)
+        {
+            parameters["risk_type"] = riskType;
+        }
     }
 }
