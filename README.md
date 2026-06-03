@@ -49,6 +49,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [VK Image](#vk-image)
     - [VK Captcha](#vk-captcha)  
     - [Altchacaptcha](#altchacaptcha)
+    - [Binancecaptcha](#binancecaptcha)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -585,6 +586,21 @@ Altchacaptcha captcha = new Altchacaptcha();
 captcha.SetChallengeUrl("https://.../captcha/api/altcha/challenge");
 captcha.SetPageUrl("https://site.com/");
 ```
+
+### Binancecaptcha
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#binance)</sup>
+
+Use this method to solve Binancecaptcha and obtain a token to bypass the protection.
+
+```csharp
+BinanceCaptcha captcha = new BinanceCaptcha();
+captcha.SetSiteKey("login");
+captcha.SetPageUrl("https://example.com/page-with-binance");
+captcha.SetValidateId("cb0bfef...e54ecd57b");captcha.SetChallengeUrl("https://.../captcha/api/altcha/challenge");
+captcha.SetPageUrl("https://site.com/");
+```
+
 
 ## Other methods
 

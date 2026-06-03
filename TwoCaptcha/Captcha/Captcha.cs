@@ -68,9 +68,9 @@ namespace TwoCaptcha.Captcha
             parameters["sitekey"] = siteKey;
         }
 
-        public void SetUrl(String url)
+        public void SetPageUrl(String pageUrl)
         {
-            parameters["pageurl"] = url;
+            parameters["pageurl"] = pageUrl;
         }
     }
 }

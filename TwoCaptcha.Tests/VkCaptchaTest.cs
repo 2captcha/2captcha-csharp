@@ -16,7 +16,7 @@ namespace TwoCaptcha.Tests
         {
             VkCaptcha captcha = new VkCaptcha("vkcaptcha");
             captcha.SetSiteKey("0x4AAAAAAAChNiVJM_WtShFf");
-            captcha.SetUrl("https://ace.fusionist.io");
+            captcha.SetPageUrl("https://ace.fusionist.io");
             
             var parameters = new Dictionary<string, string>();
             parameters["method"] = "vkcaptcha";

@@ -223,6 +223,10 @@ public class Run
             case "AltchacaptchaExample":
                 AltchacaptchaExample AltchacaptchaExample = new AltchacaptchaExample(apiKey);
                 break;
+
+            case "BinanceCaptchaExample":
+                BinanceCaptchaExample BinanceCaptchaExample = new BinanceCaptchaExample(apiKey);
+                break;
         }
     }
 }
