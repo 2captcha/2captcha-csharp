@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["method"] = "binance";
             parameters["sitekey"] = "login";
             parameters["pageurl"] = "https://example.com/page-with-binance";
+            parameters["validate_id"] = "cb0bfef...e54ecd57b";
             parameters["soft_id"] = "4582";
             parameters["json"] = "0";
 
