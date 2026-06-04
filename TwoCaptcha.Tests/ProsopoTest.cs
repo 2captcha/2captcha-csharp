@@ -20,6 +20,7 @@ namespace TwoCaptcha.Tests
             parameters["sitekey"] = "5EZVvsHMrKCFKp5NYNoTyDjTjetoVo1Z4UNNbTwJf1GfN6Xm";
             parameters["pageurl"] = "https://www.twickets.live/";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

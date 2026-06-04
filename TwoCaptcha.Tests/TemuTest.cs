@@ -40,7 +40,7 @@ namespace TwoCaptcha.Tests
             parameters["part2"] = part2Str;
             parameters["part3"] = part3Str;
             parameters["soft_id"] = "4582";
-
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

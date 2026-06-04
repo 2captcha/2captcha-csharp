@@ -23,6 +23,7 @@ namespace TwoCaptcha.Tests
             parameters["soft_id"] = "4582";
             parameters["pageurl"] = "https://ace.fusionist.io";
             parameters["sitekey"] = "0x4AAAAAAAChNiVJM_WtShFf";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }

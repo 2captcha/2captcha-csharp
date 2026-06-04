@@ -25,6 +25,7 @@ namespace TwoCaptcha.Tests
             parameters["proxy"] = "username:password@1.2.3.4:5678";
             parameters["proxytype"] = "HTTPS";
             parameters["soft_id"] = "4582";
+            parameters["json"] = "0";
 
             await CheckIfCorrectParamsSendAndResultReturned(captcha, parameters);
         }
