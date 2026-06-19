@@ -227,6 +227,10 @@ public class Run
             case "BinanceCaptchaExample":
                 BinanceCaptchaExample BinanceCaptchaExample = new BinanceCaptchaExample(apiKey);
                 break;
+
+            case "YidunExample":
+                YidunExample YidunExample = new YidunExample(apiKey);
+                break;
         }
     }
 }

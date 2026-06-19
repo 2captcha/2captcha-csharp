@@ -50,6 +50,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [VK Captcha](#vk-captcha)  
     - [Altchacaptcha](#altchacaptcha)
     - [Binancecaptcha](#binancecaptcha)
+    - [Yidun](#yidun)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -601,6 +602,18 @@ captcha.SetValidateId("cb0bfef...e54ecd57b");captcha.SetChallengeUrl("https://..
 captcha.SetPageUrl("https://site.com/");
 ```
 
+
+### Yidun
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#yidun)</sup>
+
+Use this method to solve Yidun and obtain a token to bypass the protection.
+
+```csharp
+Yidun captcha = new Yidun();
+captcha.SetSiteKey("0f743r3g1...8rz3grz0ym5");
+captcha.SetPageUrl("https://example.com/page-with-yidun");
+```
 
 ## Other methods
 
