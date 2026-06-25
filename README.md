@@ -616,6 +616,21 @@ captcha.SetSiteKey("0f743r3g1...8rz3grz0ym5");
 captcha.SetPageUrl("https://example.com/page-with-yidun");
 ```
 
+### Hunt
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#hunt)</sup>
+
+Use this method to solve Hunt captcha and obtain a token to bypass the protection.
+
+```csharp
+Hunt captcha = new Hunt();
+captcha.SetUrl("https://example.com/page-with-hunt");
+captcha.SetApiGetLib("https://example.com/hd-api/external/apps/app-id/api.js");
+captcha.SetData("meta.token.value");
+captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36");
+captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+```
+
 ## Other methods
 
 ### send / getResult

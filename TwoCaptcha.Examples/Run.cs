@@ -231,6 +231,10 @@ public class Run
             case "YidunExample":
                 YidunExample YidunExample = new YidunExample(apiKey);
                 break;
+
+            case "HuntExample":
+                HuntExample HuntExample = new HuntExample(apiKey);
+                break;
         }
     }
 }
