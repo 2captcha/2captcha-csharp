@@ -51,6 +51,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Altchacaptcha](#altchacaptcha)
     - [Binancecaptcha](#binancecaptcha)
     - [Yidun](#yidun)
+    - [Hunt](#hunt)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
