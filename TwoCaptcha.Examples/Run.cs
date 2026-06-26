@@ -235,6 +235,10 @@ public class Run
             case "HuntExample":
                 HuntExample HuntExample = new HuntExample(apiKey);
                 break;
+
+            case "BasiliskExample":
+                BasiliskExample BasiliskExample = new BasiliskExample(apiKey);
+                break;
         }
     }
 }

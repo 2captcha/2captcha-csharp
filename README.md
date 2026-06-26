@@ -52,6 +52,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Binancecaptcha](#binancecaptcha)
     - [Yidun](#yidun)
     - [Hunt](#hunt)
+    - [Basilisk](#basilisk)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -630,6 +631,22 @@ captcha.SetData("meta.token.value");
 captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
+
+### Basilisk
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#basilisk)</sup>
+
+Use this method to solve Basilisk captcha and obtain a token to bypass the protection.
+
+```csharp
+Basilisk captcha = new Basilisk();
+captcha.SetSiteKey("b7890h...19fb2600897");
+captcha.SetUrl("https://example.com/login");
+captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36");
+captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+```
+
+The response contains `captcha_response` token and optionally `useragent`. Submit `captcha_response` to the target site as the Basilisk answer. If `useragent` is present in the response, use the same User-Agent for subsequent requests to the site.
 
 ## Other methods
 
