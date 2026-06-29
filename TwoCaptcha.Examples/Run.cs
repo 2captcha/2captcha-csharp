@@ -239,6 +239,10 @@ public class Run
             case "BasiliskExample":
                 BasiliskExample BasiliskExample = new BasiliskExample(apiKey);
                 break;
+
+            case "TspdExample":
+                TspdExample TspdExample = new TspdExample(apiKey);
+                break;    
         }
     }
 }

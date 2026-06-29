@@ -53,6 +53,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Yidun](#yidun)
     - [Hunt](#hunt)
     - [Basilisk](#basilisk)
+    - [Tspd](#tspd)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -647,6 +648,22 @@ captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
 The response contains `captcha_response` token and optionally `useragent`. Submit `captcha_response` to the target site as the Basilisk answer. If `useragent` is present in the response, use the same User-Agent for subsequent requests to the site.
+
+
+### Tspd
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#tspd)</sup>
+
+Use this method to solve Tspd captcha and obtain a token to bypass the protection.
+
+```csharp
+Tspd captcha = new Tspd();
+captcha.SetPageUrl("https://example.com/login");
+captcha.SetTspdCookie("TS386a400d029=082670...010245; TS386a400d078=082670...dbb3b0c");
+captcha.SetHtmlPageBase64("PCFET0NUWVBFIGh0bWw+...");
+captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
+```
+
 
 ## Other methods
 
