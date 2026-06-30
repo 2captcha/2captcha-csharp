@@ -54,6 +54,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Hunt](#hunt)
     - [Basilisk](#basilisk)
     - [Tspd](#tspd)
+    - [Alibaba](#alibaba)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -664,6 +665,19 @@ captcha.SetHtmlPageBase64("PCFET0NUWVBFIGh0bWw+...");
 captcha.SetProxy("HTTPS", "login:password@IP_address:PORT");
 ```
 
+
+### Alibaba
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#alibaba)</sup>
+
+Use this method to solve Alibaba captcha and obtain a token to bypass the protection.
+
+```csharp
+AlibabaCaptcha captcha = new AlibabaCaptcha();
+captcha.SetSceneId("login");
+captcha.SetPrefix("https://img.alicdn.com/tfs/...");
+captcha.SetPageUrl("https://example.com/page-with-alibaba");
+```
 
 ## Other methods
 

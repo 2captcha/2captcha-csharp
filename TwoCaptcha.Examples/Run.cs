@@ -242,7 +242,11 @@ public class Run
 
             case "TspdExample":
                 TspdExample TspdExample = new TspdExample(apiKey);
-                break;    
+                break;   
+
+            case "AlibabaCaptchaExample":
+                AlibabaCaptchaExample AlibabaCaptchaExample = new AlibabaCaptchaExample(apiKey);
+                break; 
         }
     }
 }
