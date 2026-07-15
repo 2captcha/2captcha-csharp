@@ -13,7 +13,7 @@ namespace TwoCaptcha.Tests
         {
             Basilisk captcha = new Basilisk();
             captcha.SetSiteKey("b7890h...19fb2600897");
-            captcha.SetUrl("https://example.com/login");
+            captcha.SetPageUrl("https://example.com/login");
             captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36");
             captcha.SetProxy("HTTPS", "login:password@1.2.3.4:5678");
 
