@@ -18,22 +18,6 @@ namespace TwoCaptcha.Captcha
             files = new Dictionary<string, FileInfo>();
         }
         
-        public void SetProxy(string type, string uri)
-        {
-            parameters["proxy"] = uri;
-            parameters["proxytype"] = type;
-        }
-
-        public void SetSoftId(int softId)
-        {
-            parameters["soft_id"] = Convert.ToString(softId);
-        }
-
-        public void SetCallback(String callback)
-        {
-            parameters["pingback"] = callback;
-        }
-
         public Dictionary<string, string> GetParameters()
         {
             var parameters = new Dictionary<string, string>(this.parameters);
@@ -58,19 +42,5 @@ namespace TwoCaptcha.Captcha
             return new Dictionary<string, FileInfo>(files);
         }
 
-        public void SetUserAgent(string userAgent)
-        {
-            parameters["userAgent"] = userAgent;
-        }
-      
-        public void SetSiteKey(String siteKey)
-        {
-            parameters["sitekey"] = siteKey;
-        }
-
-        public void SetPageUrl(String pageUrl)
-        {
-            parameters["pageurl"] = pageUrl;
-        }
     }
 }
