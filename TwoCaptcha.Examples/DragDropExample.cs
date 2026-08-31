@@ -13,11 +13,11 @@ namespace TwoCaptcha.Examples
             TwoCaptcha solver = new TwoCaptcha(apiKey);
 
             DragDrop captcha = new DragDrop();
-            captcha.SetFile("resources/grid.jpg");
+            captcha.SetFile("resources/dragdrop/drag_drop_main.jpeg");
             captcha.SetImages(new List<string>
             {
-                Convert.ToBase64String(File.ReadAllBytes("resources/grid_2.jpg")),
-                Convert.ToBase64String(File.ReadAllBytes("resources/normal.jpg"))
+                Convert.ToBase64String(File.ReadAllBytes("resources/dragdrop/drag_drop_image1.jpeg")),
+                Convert.ToBase64String(File.ReadAllBytes("resources/dragdrop/drag_drop_image2.jpeg"))
             });
             captcha.SetHintText("Drag the images to proper position");
 
