@@ -246,7 +246,11 @@ public class Run
 
             case "AlibabaCaptchaExample":
                 AlibabaCaptchaExample AlibabaCaptchaExample = new AlibabaCaptchaExample(apiKey);
-                break; 
+                break;
+
+            case "DragDropExample":
+                DragDropExample DragDropExample = new DragDropExample(apiKey);
+                break;
         }
     }
 }

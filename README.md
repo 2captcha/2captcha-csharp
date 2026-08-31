@@ -55,6 +55,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Basilisk](#basilisk)
     - [Tspd](#tspd)
     - [Alibaba](#alibaba)
+    - [Drag-and-Drop](#drag-and-drop)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -677,6 +678,24 @@ AlibabaCaptcha captcha = new AlibabaCaptcha();
 captcha.SetSceneId("login");
 captcha.SetPrefix("https://img.alicdn.com/tfs/...");
 captcha.SetPageUrl("https://example.com/page-with-alibaba");
+```
+
+### Drag-and-Drop
+
+<sup>[API method description.](https://2captcha.com/api-docs/drag-and-drop)</sup>
+
+Use this method to bypass tasks where you need to drag one or more images onto specific positions on a background image. Returns the coordinates for each image from the `images` list, in the same order, separated by "|". An image that wasn't moved is returned as "null".
+
+```csharp
+DragDrop captcha = new DragDrop();
+captcha.SetFile("path/to/captcha.jpg");
+captcha.SetImages(new List<string>
+{
+    Convert.ToBase64String(File.ReadAllBytes("path/to/image1.jpg")),
+    Convert.ToBase64String(File.ReadAllBytes("path/to/image2.jpg"))
+});
+captcha.SetLang("en");
+captcha.SetHintText("Drag the images to proper position");
 ```
 
 ## Other methods
