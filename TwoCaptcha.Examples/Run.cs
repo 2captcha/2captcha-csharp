@@ -1,5 +1,4 @@
-﻿
-using TwoCaptcha.Examples;
+﻿using TwoCaptcha.Examples;
 
 public class Run
 {
