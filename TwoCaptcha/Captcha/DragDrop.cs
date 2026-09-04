@@ -45,5 +45,10 @@ namespace TwoCaptcha.Captcha
         {
             parameters["header_acao"] = headerAcao.ToString();
         }
+
+        public void SetLanguage(int language)
+        {
+            parameters["language"] = language;
+        }
     }
 }
