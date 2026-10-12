@@ -56,6 +56,7 @@ Examples of API requests for different captcha types are available on the [C# ca
     - [Tspd](#tspd)
     - [Alibaba](#alibaba)
     - [Drag-and-Drop](#drag-and-drop)
+    - [Imperva](#imperva)
   - [Other methods](#other-methods)
     - [send / getResult](#send--getresult)
     - [balance](#balance)
@@ -696,6 +697,22 @@ captcha.SetImages(new List<string>
 });
 captcha.SetLang("en");
 captcha.SetHintText("Drag the images to proper position");
+```
+
+### Imperva
+
+<sup>[API method description.](https://2captcha.com/2captcha-api#imperva)</sup>
+
+Use this method to solve Imperva (Incapsula) captcha. A proxy is required. The result is a JSON object with the cookies (`domains`) to pass to the target site and the `User-Agent` (`headers`) to use in your requests.
+
+```csharp
+Imperva captcha = new Imperva();
+captcha.SetPageUrl("https://example.com/login");
+captcha.SetIncapsulaScriptUrl("/_Incapsula_Resource?SWUDNSAI=31&xinfo=1");
+captcha.SetIncapsulaCookies("visid_incap_123456=sample; incap_ses_123_123456=sample");
+captcha.SetReese84UrlEndpoint("https://example.com/_Incapsula_Resource?reese84=1");
+captcha.SetUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36");
+captcha.SetProxy("HTTP", "login:password@1.2.3.4:8080");
 ```
 
 ## Other methods

@@ -248,6 +248,10 @@ public class Run
             case "DragDropExample":
                 DragDropExample DragDropExample = new DragDropExample(apiKey);
                 break;
+
+            case "ImpervaExample":
+                ImpervaExample ImpervaExample = new ImpervaExample(apiKey);
+                break;
         }
     }
 }

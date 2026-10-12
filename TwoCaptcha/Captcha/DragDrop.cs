@@ -48,7 +48,7 @@ namespace TwoCaptcha.Captcha
 
         public void SetLanguage(int language)
         {
-            parameters["language"] = language;
+            parameters["language"] = language.ToString();
         }
     }
 }
